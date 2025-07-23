@@ -11,6 +11,15 @@
    <link rel="shortcut icon" href="assets/favicon.png" type="image/png">
   <script type="module" crossorigin src="assets/main-DwB1b1zN.js"></script>
   <link rel="stylesheet" crossorigin href="assets/main-B9xypkzf.css">
+  
+  <!-- Custom CSS Override for Header -->
+  <style>
+  @media only screen and (min-width: 1200px) {
+     .header-area .header-top {
+        background-color: var(--Background) !important;
+     }
+  }
+  </style>
 </head>
 
 <body>
@@ -154,16 +163,7 @@
             <div class="hero-video bg-img jarallax">
                <img class="jarallax-img" src="assets/32-xfPdu8Ng.jpg" alt="">
 
-               <!-- Play Video -->
-               <div class="play-video-btn video-btn" data-video="https://youtu.be/VCPGMjCW0is">
-                  <div class="icon">
-                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
-                        <path d="M22.5 12.0005C22.5006 12.2551 22.4353 12.5056 22.3105 12.7275C22.1856 12.9495 22.0055 13.1353 21.7875 13.267L8.28 21.5302C8.05227 21.6696 7.79144 21.7457 7.52445 21.7507C7.25746 21.7556 6.99399 21.6892 6.76125 21.5583C6.53073 21.4294 6.3387 21.2414 6.2049 21.0137C6.07111 20.786 6.00039 20.5268 6 20.2627V3.73828C6.00039 3.47417 6.07111 3.21493 6.2049 2.98722C6.3387 2.75951 6.53073 2.57155 6.76125 2.44266C6.99399 2.31173 7.25746 2.24531 7.52445 2.25026C7.79144 2.2552 8.05227 2.33133 8.28 2.47078L21.7875 10.7339C22.0055 10.8656 22.1856 11.0515 22.3105 11.2734C22.4353 11.4953 22.5006 11.7458 22.5 12.0005Z" fill="#F75709"></path>
-                     </svg>
-                  </div>
-                  <!-- Video Sonar -->
-                  <div class="video-sonar"></div>
-               </div>
+              
             </div>
          </div>
       </div>
@@ -174,41 +174,7 @@
       <!-- Divider -->
       <div class="divider"></div>
 
-      <div class="container">
-         <div class="row align-items-center g-4">
-            <!-- Cool Facts Card -->
-            <div class="col-12 col-sm-6 col-lg-3">
-               <div class="cool-fact-card style-two wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1000ms">
-                  <h2 class="mb-0"><span class="counter">5</span>+</h2>
-                  <p class="mb-0">Tamamlanan proje</p>
-               </div>
-            </div>
-
-            <!-- Cool Facts Card -->
-            <div class="col-12 col-sm-6 col-lg-3">
-               <div class="cool-fact-card style-two wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1000ms">
-                  <h2 class="mb-0"><span class="counter">3</span>+</h2>
-                  <p class="mb-0">Yıl deneyim</p>
-               </div>
-            </div>
-
-            <!-- Cool Facts Card -->
-            <div class="col-12 col-sm-6 col-lg-3">
-               <div class="cool-fact-card style-two wow fadeInUp" data-wow-delay="800ms" data-wow-duration="1000ms">
-                  <h2 class="mb-0"><span class="counter">10</span>+</h2>
-                  <p class="mb-0">Kullanılan teknoloji</p>
-               </div>
-            </div>
-
-            <!-- Cool Facts Card -->
-            <div class="col-12 col-sm-6 col-lg-3">
-               <div class="cool-fact-card style-two wow fadeInUp" data-wow-delay="1000ms" data-wow-duration="1000ms">
-                  <h2 class="mb-0"><span class="counter">6</span></h2>
-                  <p class="mb-0">Ekip üyesi</p>
-               </div>
-            </div>
-         </div>
-      </div>
+   
 
       <!-- Divider -->
       <div class="divider"></div>
@@ -236,7 +202,7 @@
                      <hr class="mb-4 border-white">
                      <p class="mb-5 text-white">"Amacımız, oyuncuları büyüleyecek, challenge edecek ve eğlendirecek 
                         oyun deneyimleri yaratmak."</p>
-                     <a href="#team-members" class="btn btn-primary">
+                     <a href="mechanics.html" class="btn btn-primary">
                         <span>Ekibi Keşfet <i class="ti ti-arrow-up-right"></i></span>
                         <span>Ekibi Keşfet <i class="ti ti-arrow-up-right"></i></span>
                      </a>
@@ -249,17 +215,16 @@
       <!-- Divider -->
       <div class="divider"></div>
    </section>
-
-   <!-- Team Services Wrapper -->
-   <section class="insurance-services-section" id="team-members">
+ <!-- Team Wrapper -->
+   <section class="team-section">
       <!-- Divider -->
       <div class="divider"></div>
 
       <div class="container">
          <div class="row justify-content-center">
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-sm-8">
                <div class="section-heading text-center">
-                  <h2 class="mb-0">Ekip üyelerimizle tanışın</h2>
+                  <h2 class="mb-0">Profesyonel ekip üyelerimizle tanışın</h2>
                </div>
             </div>
          </div>
@@ -269,65 +234,40 @@
 
       <div class="container">
          <div class="row g-4">
-            <!-- Team Member Card -->
+
+            <!-- Team Card -->
             <div class="col-12 col-sm-6 col-lg-4">
-               <div class="insurance-service-card">
-                  <div class="insurance-service-icon">
-                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewbox="0 0 40 40" fill="none">
-                        <mask id="mask0_1_639" style="mask-type:luminance" maskunits="userSpaceOnUse" x="0" y="0" width="40" height="40">
-                           <path d="M0 3.8147e-06H40V40H0V3.8147e-06Z" fill="white"></path>
-                        </mask>
-                        <g mask="url(#mask0_1_639)">
-                           <path d="M35.7797 10.8676C35.7604 9.85094 35.7419 8.89047 35.7419 7.96141C35.7419 7.23344 35.1519 6.64336 34.4239 6.64336C28.7871 6.64336 24.4955 5.02329 20.9181 1.54508C20.4064 1.04735 19.592 1.04758 19.0805 1.54508C15.5035 5.02329 11.2126 6.64336 5.57616 6.64336C4.84819 6.64336 4.25804 7.23344 4.25804 7.96141C4.25804 8.89071 4.23983 9.85149 4.2203 10.8684C4.03968 20.3295 3.79226 33.2872 19.5676 38.7553C19.7075 38.8038 19.8533 38.8281 19.9992 38.8281C20.1451 38.8281 20.2911 38.8038 20.4308 38.7553C36.2074 33.287 35.9604 20.329 35.7797 10.8676Z" stroke="#F75709" stroke-width="2.34375" stroke-miterlimit="10"></path>
-                           <path d="M22.3391 17.2687V12.3256H17.6621V17.2687H12.7188V21.9457H17.6621V26.8887H22.3391V21.9457H27.2818V17.2687H22.3391Z" stroke="#F75709" stroke-width="2.34375" stroke-miterlimit="10" stroke-linejoin="round"></path>
-                        </g>
-                     </svg>
+               <div class="team-card-two wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1000ms">
+                  <img src="assets/14-DFPFDhm1.jpg" alt="">
+                  <!-- Team Content -->
+                  <div class="team-content">
+                     <h4><a class="member-title" href="team.html">Ahmet Yılmaz</a></h4>
+                     <p class="mb-0">Pazarlama Uzmanı</p>
                   </div>
-                  <div>
-                     <h4>Ahmet Yılmaz</h4>
-                     <p class="mb-0">Proje Lideri ve Oyun Tasarımcısı. 5+ yıl oyun geliştirme deneyimi ile 
-                        projeyi yönetiyor ve oyun mekaniklerini tasarlıyor.</p>
-                  </div>
-                  <a href="#" class="btn btn-link">
-                     <span>Profil <i class="ti ti-arrow-up-right"></i></span>
-                     <span>Profil <i class="ti ti-arrow-up-right"></i></span>
-                  </a>
                </div>
             </div>
 
-            <!-- Team Member Card -->
+            <!-- Team Card -->
             <div class="col-12 col-sm-6 col-lg-4">
-               <div class="insurance-service-card">
-                  <div class="insurance-service-icon">
-                 
+               <div class="team-card-two wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1000ms">
+                  <img src="assets/15-DxFns-_C.jpg" alt="">
+                  <!-- Team Content -->
+                  <div class="team-content">
+                     <h4><a class="member-title" href="team.html">Ayşe Kaya</a></h4>
+                     <p class="mb-0">Oyun Mühendisi</p>
                   </div>
-                  <div>
-                     <h4>Elif Demir</h4>
-                     <p class="mb-0">Frontend Developer ve UI/UX Tasarımcısı. Modern web teknolojileri ile 
-                        oyunun kullanıcı arayüzünü geliştiriyor.</p>
-                  </div>
-                  <a href="#" class="btn btn-link">
-                     <span>Profil <i class="ti ti-arrow-up-right"></i></span>
-                     <span>Profil <i class="ti ti-arrow-up-right"></i></span>
-                  </a>
                </div>
             </div>
 
-            <!-- Team Member Card -->
+            <!-- Team Card -->
             <div class="col-12 col-sm-6 col-lg-4">
-               <div class="insurance-service-card">
-                  <div class="insurance-service-icon">
-                   
+               <div class="team-card-two wow fadeInUp" data-wow-delay="800ms" data-wow-duration="1000ms">
+                  <img src="assets/16-CMuRH3-k.jpg" alt="">
+                  <!-- Team Content -->
+                  <div class="team-content">
+                     <h4><a class="member-title" href="team.html">Mehmet Demir</a></h4>
+                     <p class="mb-0">Sanat Yönetmeni</p>
                   </div>
-                  <div>
-                     <h4>Mehmet Kaya</h4>
-                     <p class="mb-0">Backend Developer ve DevOps Uzmanı. Oyunun sunucu altyapısını 
-                        geliştiriyor ve sistem performansını optimize ediyor.</p>
-                  </div>
-                  <a href="#" class="btn btn-link">
-                     <span>Profil <i class="ti ti-arrow-up-right"></i></span>
-                     <span>Profil <i class="ti ti-arrow-up-right"></i></span>
-                  </a>
                </div>
             </div>
 
@@ -349,7 +289,7 @@
                <div class="pe-xl-5">
                   <div class="section-heading">
                      <h2 class="mb-3">Etkili geliştirme yaklaşımımız</h2>
-                     <p class="mb-0">3 yılı aşkın deneyimimizle, binlerce saatlik geliştirme sürecinden 
+                     <p class="mb-0">5 yılı aşkın deneyimimizle, binlerce saatlik geliştirme sürecinden 
                         çıkardığımız dersleri ReelRusher projesine uyarlıyoruz.</p>
                   </div>
 
@@ -432,10 +372,10 @@
                   </ul>
                   <!-- Pricing Footer -->
                   <div class="pricing-footer mt-5">
-                     <a href="#" class="btn btn-primary w-100">
+                     <span class="btn btn-primary w-100">
                         <span>Tamamlandı <i class="ti ti-check"></i></span>
                         <span>Tamamlandı <i class="ti ti-check"></i></span>
-                     </a>
+                     </span>
                   </div>
                </div>
             </div>
@@ -461,10 +401,10 @@
                   </ul>
                   <!-- Pricing Footer -->
                   <div class="pricing-footer mt-5">
-                     <a href="#" class="btn btn-light w-100">
+                     <span class="btn btn-light w-100">
                         <span>Devam Ediyor <i class="ti ti-loader"></i></span>
                         <span>Devam Ediyor <i class="ti ti-loader"></i></span>
-                     </a>
+                     </span>
                   </div>
                </div>
             </div>
@@ -488,10 +428,10 @@
                   </ul>
                   <!-- Pricing Footer -->
                   <div class="pricing-footer mt-5">
-                     <a href="#" class="btn btn-primary w-100">
+                     <span class="btn btn-primary w-100">
                         <span>Yakında <i class="ti ti-clock"></i></span>
                         <span>Yakında <i class="ti ti-clock"></i></span>
-                     </a>
+                     </span>
                   </div>
                </div>
             </div>
@@ -536,21 +476,43 @@
       <div class="container">
          <div class="row justify-content-center">
             <div class="col-12 col-lg-8">
-               <div class="section-heading text-center">
-                  <h2 class="mb-4">Erken erişim kazanmak için e-posta adresini bırak!</h2>
-                  <p class="mb-5">ReelRusher'ın beta versiyonuna ilk erişim hakkı kazanmak için e-posta adresini 
-                     kaydet. Oyun hazır olduğunda sana haber verelim!</p>
-               </div>
+              
+ 
+               <!-- Email Signup -->
+               <div class="book-consultation-card shadow wow fadeInUp" data-wow-delay="1000ms" data-wow-duration="1000ms">
+                  <h5>Erken erişim kazanmak için e-posta adresini bırak!</h5>
+                  <p class="mb-4">ReelRusher beta sürümüne ilk erişim hakkı kazan</p>
 
-               <!-- Email Signup Form -->
-               <form action="#" class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
-                  <input type="email" class="form-control" placeholder="E-posta adresin" required>
-                  <button type="submit" class="btn btn-primary">
-                     <span>Kayıt Ol <i class="ti ti-arrow-up-right"></i></span>
-                     <span>Kayıt Ol <i class="ti ti-arrow-up-right"></i></span>
-                  </button>
-               </form>
+                  <form action="#" id="signup" novalidate>
+                     <div class="row g-4">
+                        <div class="col-12">
+                           <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Adın" id="userName" name="userName" required minlength="2">
+                              <div class="invalid-feedback">
+                                 Lütfen geçerli bir ad girin (en az 2 karakter).
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-12">
+                           <div class="form-group">
+                              <input type="email" class="form-control" placeholder="E-posta adresi" id="userEmail" name="userEmail" required>
+                              <div class="invalid-feedback">
+                                 Lütfen geçerli bir e-posta adresi girin.
+                              </div>
+                           </div>
+                        </div>
+                       
+                        <div class="col-12">
+                           <button type="submit" class="btn btn-primary w-100">
+                              <span>Kayıt Ol</span>
+                              <span>Kayıt Ol</span>
+                           </button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
             </div>
+        
          </div>
       </div>
 
@@ -651,6 +613,249 @@
          </div>
       </div>
    </footer>
+
+     <!-- Success Popup Modal -->
+   <div id="successModal" class="modal-overlay" style="display: none;">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h4 class="text-success">
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22,4 12,14.01 9,11.01"></polyline>
+               </svg>
+               Başarılı!
+            </h4>
+            <button type="button" class="close-modal" aria-label="Kapat">
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+               </svg>
+            </button>
+         </div>
+         <div class="modal-body">
+            <p>🎉 Harika! <strong id="registeredName"></strong>, ReelRusher erken erişim listesine başarıyla kaydoldun!</p>
+            <p>Beta sürümü hazır olduğunda <strong id="registeredEmail"></strong> adresine bilgi vereceğiz.</p>
+            <p style="margin-top: 15px; font-size: 14px; color: #666;">
+               📧 E-posta kutunu kontrol etmeyi unutma!
+            </p>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-primary close-modal">Tamam</button>
+         </div>
+      </div>
+   </div>
+
+   <!-- CSS for Modal -->
+   <style>
+   .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 0.3s ease-out;
+   }
+
+   .modal-content {
+      background: white;
+      border-radius: 12px;
+      max-width: 500px;
+      width: 90%;
+      margin: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+      animation: slideUp 0.3s ease-out;
+   }
+
+   .modal-header {
+      padding: 20px 24px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 15px;
+   }
+
+   .modal-header h4 {
+      margin: 0;
+      color: #174035;
+      display: flex;
+      align-items: center;
+   }
+
+   .close-modal {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 50%;
+      transition: background-color 0.2s;
+   }
+
+   .close-modal:hover {
+      background-color: #f1f1f1;
+   }
+
+   .modal-body {
+      padding: 20px 24px;
+   }
+
+   .modal-body p {
+      margin-bottom: 10px;
+      line-height: 1.5;
+   }
+
+   .modal-footer {
+      padding: 0 24px 20px;
+      text-align: right;
+   }
+
+   .invalid-feedback {
+      display: none;
+      font-size: 14px;
+      color: #dc3545;
+      margin-top: 5px;
+   }
+
+   .form-control.is-invalid {
+      border-color: #dc3545;
+   }
+
+   .form-control.is-invalid ~ .invalid-feedback {
+      display: block;
+   }
+
+   .form-control.is-valid {
+      border-color: #28a745;
+   }
+
+   @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+   }
+
+   @keyframes slideUp {
+      from { 
+         opacity: 0;
+         transform: translateY(30px);
+      }
+      to { 
+         opacity: 1;
+         transform: translateY(0);
+      }
+   }
+   </style>
+
+   <!-- JavaScript for Form Validation and Modal -->
+   <script>
+   document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('signup');
+      const nameInput = document.getElementById('userName');
+      const emailInput = document.getElementById('userEmail');
+      const modal = document.getElementById('successModal');
+      const closeBtns = document.querySelectorAll('.close-modal');
+
+      // Email validation regex
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      // Real-time validation
+      nameInput.addEventListener('input', function() {
+         validateName(this);
+      });
+
+      emailInput.addEventListener('input', function() {
+         validateEmail(this);
+      });
+
+      // Form submission
+      form.addEventListener('submit', function(e) {
+         e.preventDefault();
+         
+         const isNameValid = validateName(nameInput);
+         const isEmailValid = validateEmail(emailInput);
+
+         if (isNameValid && isEmailValid) {
+            // Show success modal
+            document.getElementById('registeredName').textContent = nameInput.value.trim();
+            document.getElementById('registeredEmail').textContent = emailInput.value.trim();
+            showModal();
+            
+            // Reset form
+            form.reset();
+            clearValidation();
+         }
+      });
+
+      // Close modal events
+      closeBtns.forEach(btn => {
+         btn.addEventListener('click', hideModal);
+      });
+
+      // Close modal on outside click
+      modal.addEventListener('click', function(e) {
+         if (e.target === modal) {
+            hideModal();
+         }
+      });
+
+      // Close modal on Escape key
+      document.addEventListener('keydown', function(e) {
+         if (e.key === 'Escape' && modal.style.display !== 'none') {
+            hideModal();
+         }
+      });
+
+      function validateName(input) {
+         const value = input.value.trim();
+         const isValid = value.length >= 2;
+         
+         if (isValid) {
+            input.classList.remove('is-invalid');
+            input.classList.add('is-valid');
+         } else {
+            input.classList.remove('is-valid');
+            input.classList.add('is-invalid');
+         }
+         
+         return isValid;
+      }
+
+      function validateEmail(input) {
+         const value = input.value.trim();
+         const isValid = emailRegex.test(value);
+         
+         if (isValid) {
+            input.classList.remove('is-invalid');
+            input.classList.add('is-valid');
+         } else {
+            input.classList.remove('is-valid');
+            input.classList.add('is-invalid');
+         }
+         
+         return isValid;
+      }
+
+      function clearValidation() {
+         [nameInput, emailInput].forEach(input => {
+            input.classList.remove('is-valid', 'is-invalid');
+         });
+      }
+
+      function showModal() {
+         modal.style.display = 'flex';
+         document.body.style.overflow = 'hidden';
+      }
+
+      function hideModal() {
+         modal.style.display = 'none';
+         document.body.style.overflow = '';
+      }
+   });
+   </script>
 
    <!-- Cookie Alert -->
    <div class="cookiealert shadow-lg show">
