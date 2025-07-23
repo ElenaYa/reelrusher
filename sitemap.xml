@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   
+   <!-- Main Pages -->
+   <url>
+      <loc>https://reelrusher.com/</loc>
+      <lastmod>2025-07-23</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>1.0</priority>
+   </url>
+   
+   <url>
+      <loc>https://reelrusher.com/about-us.html</loc>
+      <lastmod>2025-07-23</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   
+   <url>
+      <loc>https://reelrusher.com/contact.html</loc>
+      <lastmod>2025-07-23</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   
+   <!-- Game Information Pages -->
+   <url>
+      <loc>https://reelrusher.com/mechanics.html</loc>
+      <lastmod>2025-07-23</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.9</priority>
+   </url>
+   
+   <url>
+      <loc>https://reelrusher.com/game-art.html</loc>
+      <lastmod>2025-07-23</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   
+   <url>
+      <loc>https://reelrusher.com/technology.html</loc>
+      <lastmod>2025-07-23</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   
+   <url>
+      <loc>https://reelrusher.com/team.html</loc>
+      <lastmod>2025-07-23</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.7</priority>
+   </url>
+   
+   <url>
+      <loc>https://reelrusher.com/roadmap.html</loc>
+      <lastmod>2025-07-23</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+   </url>
+   
+   <!-- Legal Pages -->
+   <url>
+      <loc>https://reelrusher.com/privacy-policy.html</loc>
+      <lastmod>2025-07-23</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.3</priority>
+   </url>
+   
+   <url>
+      <loc>https://reelrusher.com/terms-of-use.html</loc>
+      <lastmod>2025-07-23</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.3</priority>
+   </url>
+
+</urlset>

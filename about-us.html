@@ -27,8 +27,11 @@
    <!-- Title & Favicon -->
    <title>Hakkımızda | ReelRusher - Match-3 Bulmaca Oyunu</title>
    <link rel="shortcut icon" href="assets/favicon.png" type="image/png">
+  <script src="assets/gclid-tracker.js"></script>
   <script type="module" crossorigin src="assets/main-DwB1b1zN.js"></script>
+  <script src="assets/cookie-consent.js"></script>
   <link rel="stylesheet" crossorigin href="assets/main-B9xypkzf.css">
+  <link rel="stylesheet" href="assets/cookie-consent.css">
 </head>
 
 <body>
@@ -451,10 +454,37 @@
 
       <div class="container">
           <div class="text-center">
-         <p class="mb-0" style="font-size: 1.25rem;">
+         <p class="mb-4" style="font-size: 1.25rem;">
            ReelRusher hakkında daha fazla bilgi almak ve erken erişim fırsatını kaçırmamak için e-posta adresinizi bırakın!
          </p>
-         <a href="contact.html" class="btn btn-primary mt-3">İletişime Geç ve Erken Erişim Al <i class="ti ti-arrow-up-right"></i></a>
+         
+         <!-- Email Signup Form -->
+         <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+               <form action="#" id="aboutSignupForm" novalidate class="d-flex flex-column gap-3">
+                  <div class="form-group">
+                     <input type="text" class="form-control" placeholder="Adınız" id="aboutUserName" name="aboutUserName" required minlength="2">
+                     <div class="invalid-feedback">
+                        Lütfen geçerli bir ad girin (en az 2 karakter).
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <input type="email" class="form-control" placeholder="E-posta adresiniz" id="aboutUserEmail" name="aboutUserEmail" required>
+                     <div class="invalid-feedback">
+                        Lütfen geçerli bir e-posta adresi girin.
+                     </div>
+                  </div>
+                  <!-- Hidden GCLID inputs -->
+                  <input type="hidden" name="gclid" id="aboutGclidInput" value="">
+                  <input type="hidden" name="gclid_timestamp" id="aboutGclidTimestamp" value="">
+                  
+                  <button type="submit" class="btn btn-primary">
+                     <span>Erken Erişim İçin Kayıt Ol <i class="ti ti-arrow-up-right"></i></span>
+                     <span>Erken Erişim İçin Kayıt Ol <i class="ti ti-arrow-up-right"></i></span>
+                  </button>
+               </form>
+            </div>
+         </div>
           </div>
       </div>
 
@@ -662,7 +692,7 @@
                   <h4 class="mb-4" style="color: #FFFFFF;">Oyun Hakkında</h4>
                   <ul class="list-unstyled footer-nav-two">
                      <li><a href="mechanics.html" style="color: #E8F5E8;">Oyun Mekanikleri</a></li>
-                     <li><a href="game-arts.html" style="color: #E8F5E8;">Oyun Sanatı ve Kapaklar</a></li>
+                     <li><a href="game-art.html" style="color: #E8F5E8;">Oyun Sanatı ve Kapaklar</a></li>
                      <li><a href="team.html" style="color: #E8F5E8;">Geliştirici Ekibi</a></li>
                      <li><a href="technology.html" style="color: #E8F5E8;">Teknoloji ve Platformlar</a></li>
                      <li><a href="roadmap.html" style="color: #E8F5E8;">Geliştirme Yol Haritası</a></li>
@@ -733,9 +763,9 @@
    </footer>
 
    <!-- Cookie Alert -->
-   <div class="cookiealert shadow-lg show">
+   <div class="cookiealert shadow-lg">
       <h4 class="text-white"><i class="ti ti-cookie"></i> Çerez Uyarısı</h4>
-      <p class="mb-4 text-white">Web sitemizde en iyi deneyimi yaşamanız için çerezleri kullanıyoruz. Devam ederek çerez kullanımını kabul etmiş olursunuz. <a href="#" target="_blank">Çerez Politikası</a> için tıklayın.</p>
+      <p class="mb-4 text-white">Web sitemizde en iyi deneyimi yaşamanız için çerezleri kullanıyoruz. Devam ederek çerez kullanımını kabul etmiş olursunuz. <a href="privacy-policy.html" target="_blank">Çerez Politikası</a> için tıklayın.</p>
       <button class="btn btn-dark btn-sm acceptcookies" type="button" aria-label="Close">Kabul Et</button>
    </div>
 
@@ -743,6 +773,269 @@
    <button id="scrollTopButton" class="fandi-scrolltop scrolltop-hide">
       <i class="ti ti-arrow-up"></i>
    </button>
+
+   <!-- Success Modal for About Signup -->
+   <div class="modal" id="aboutSuccessModal" style="display: none;">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h3>Başarıyla Kayıt Oldunuz!</h3>
+            <span class="close-modal" aria-label="Close">&times;</span>
+         </div>
+         <div class="modal-body">
+            <div class="success-icon">
+               <i class="ti ti-check-circle"></i>
+            </div>
+            <h4>Teşekkürler <span id="aboutRegisteredName"></span>!</h4>
+            <p>ReelRusher erken erişim listesine başarıyla kaydoldunuz. <span id="aboutRegisteredEmail"></span> adresine erken erişim bilgilerini göndereceğiz.</p>
+         </div>
+      </div>
+   </div>
+
+   <!-- CSS for About Signup Form -->
+   <style>
+   .form-control.is-invalid {
+      border-color: #dc3545;
+      box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+   }
+   .form-control.is-invalid ~ .invalid-feedback {
+      display: block;
+      color: #dc3545;
+   }
+   .form-control.is-valid {
+      border-color: #28a745;
+      box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+   }
+   
+   .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+   }
+   
+   .modal-content {
+      background: linear-gradient(135deg, #174035 0%, #2d5a4f 100%);
+      border-radius: 15px;
+      padding: 0;
+      max-width: 500px;
+      width: 90%;
+      color: white;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      animation: modalSlideIn 0.3s ease-out;
+   }
+   
+   .modal-header {
+      padding: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   
+   .modal-header h3 {
+      margin: 0;
+      color: #ffffff;
+   }
+   
+   .close-modal {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+      padding: 0;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+   
+   .modal-body {
+      padding: 30px;
+   }
+   
+   .success-icon {
+      font-size: 60px;
+      color: #28a745;
+      margin-bottom: 20px;
+   }
+   
+   .modal-body h4 {
+      color: #ffffff;
+      margin-bottom: 15px;
+   }
+   
+   .modal-body p {
+      color: #E8F5E8;
+      margin-bottom: 0;
+      line-height: 1.6;
+   }
+   
+   @keyframes modalSlideIn {
+      from {
+         opacity: 0;
+         transform: translateY(-50px);
+      }
+      to {
+         opacity: 1;
+         transform: translateY(0);
+      }
+   }
+   </style>
+
+   <!-- JavaScript for About Signup Form -->
+   <script>
+   document.addEventListener('DOMContentLoaded', function() {
+      const aboutForm = document.getElementById('aboutSignupForm');
+      const nameInput = document.getElementById('aboutUserName');
+      const emailInput = document.getElementById('aboutUserEmail');
+      const modal = document.getElementById('aboutSuccessModal');
+      const closeBtns = document.querySelectorAll('.close-modal');
+
+      // Email validation regex
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      // Real-time validation
+      if (nameInput) {
+         nameInput.addEventListener('input', function() {
+            validateAboutName(this);
+         });
+      }
+
+      if (emailInput) {
+         emailInput.addEventListener('input', function() {
+            validateAboutEmail(this);
+         });
+      }
+
+      // Form submission
+      if (aboutForm && nameInput && emailInput) {
+         aboutForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const isNameValid = validateAboutName(nameInput);
+            const isEmailValid = validateAboutEmail(emailInput);
+
+            if (isNameValid && isEmailValid) {
+               // Capture form data and GCLID
+               const formData = {
+                  name: nameInput.value.trim(),
+                  email: emailInput.value.trim(),
+                  formType: 'about_early_access'
+               };
+               
+               // Add GCLID information if available
+               if (window.GclidTracker) {
+                  const gclidData = window.GclidTracker.getFormData();
+                  Object.assign(formData, gclidData);
+                  
+                  // Update hidden inputs
+                  const gclidInput = document.getElementById('aboutGclidInput');
+                  const gclidTimestamp = document.getElementById('aboutGclidTimestamp');
+                  if (gclidInput && gclidData.gclid) {
+                     gclidInput.value = gclidData.gclid;
+                  }
+                  if (gclidTimestamp && gclidData.gclid_timestamp) {
+                     gclidTimestamp.value = gclidData.gclid_timestamp;
+                  }
+               }
+               
+               // Show success modal
+               document.getElementById('aboutRegisteredName').textContent = nameInput.value.trim();
+               document.getElementById('aboutRegisteredEmail').textContent = emailInput.value.trim();
+               showAboutModal();
+               
+               // Reset form
+               aboutForm.reset();
+               clearAboutValidation();
+            }
+         });
+      }
+
+      // Close modal events
+      if (closeBtns.length > 0) {
+         closeBtns.forEach(btn => {
+            btn.addEventListener('click', hideAboutModal);
+         });
+      }
+
+      // Close modal on outside click
+      if (modal) {
+         modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+               hideAboutModal();
+            }
+         });
+      }
+
+      // Close modal on Escape key
+      document.addEventListener('keydown', function(e) {
+         if (e.key === 'Escape' && modal && modal.style.display !== 'none') {
+            hideAboutModal();
+         }
+      });
+
+      function validateAboutName(input) {
+         const value = input.value.trim();
+         const isValid = value.length >= 2;
+         
+         if (isValid) {
+            input.classList.remove('is-invalid');
+            input.classList.add('is-valid');
+         } else {
+            input.classList.remove('is-valid');
+            input.classList.add('is-invalid');
+         }
+         
+         return isValid;
+      }
+
+      function validateAboutEmail(input) {
+         const value = input.value.trim();
+         const isValid = emailRegex.test(value);
+         
+         if (isValid) {
+            input.classList.remove('is-invalid');
+            input.classList.add('is-valid');
+         } else {
+            input.classList.remove('is-valid');
+            input.classList.add('is-invalid');
+         }
+         
+         return isValid;
+      }
+
+      function clearAboutValidation() {
+         [nameInput, emailInput].forEach(input => {
+            if (input) {
+               input.classList.remove('is-valid', 'is-invalid');
+            }
+         });
+      }
+
+      function showAboutModal() {
+         if (modal) {
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+         }
+      }
+
+      function hideAboutModal() {
+         if (modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+         }
+      }
+   });
+   </script>
 
 </body>
 

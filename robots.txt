@@ -5,7 +5,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location (when available)
-# Sitemap: https://reelrusher.com/sitemap.xml
+Sitemap: https://reelrusher.com/sitemap.xml
 
 # Allow crawling of CSS and JS files for better indexing
 Allow: /assets/

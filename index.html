@@ -27,8 +27,11 @@
    <!-- Title & Favicon -->
    <title>Ana Sayfa | ReelRusher - Match-3 Bulmaca Oyunu</title>
    <link rel="shortcut icon" href="assets/favicon.png" type="image/png">
+  <script src="assets/gclid-tracker.js"></script>
   <script type="module" crossorigin src="assets/main-DwB1b1zN.js"></script>
+  <script src="assets/cookie-consent.js"></script>
   <link rel="stylesheet" crossorigin href="assets/main-B9xypkzf.css">
+  <link rel="stylesheet" href="assets/cookie-consent.css">
 </head>
 
 <body>
@@ -875,7 +878,10 @@
                               </div>
                            </div>
                         </div>
-                       
+                        <!-- Hidden GCLID input (will be populated by GCLID tracker) -->
+                        <input type="hidden" name="gclid" id="gclidInput" value="">
+                        <input type="hidden" name="gclid_timestamp" id="gclidTimestamp" value="">
+                        
                         <div class="col-12">
                            <button type="submit" class="btn btn-primary w-100">
                               <span>Kayıt Ol</span>
@@ -917,7 +923,7 @@
                   <h4 class="mb-4" style="color: #FFFFFF;">Oyun Hakkında</h4>
                   <ul class="list-unstyled footer-nav-two">
                      <li><a href="mechanics.html" style="color: #E8F5E8;">Oyun Mekanikleri</a></li>
-                     <li><a href="game-arts.html" style="color: #E8F5E8;">Oyun Sanatı ve Kapaklar</a></li>
+                     <li><a href="game-art.html" style="color: #E8F5E8;">Oyun Sanatı ve Kapaklar</a></li>
                      <li><a href="team.html" style="color: #E8F5E8;">Geliştirici Ekibi</a></li>
                      <li><a href="technology.html" style="color: #E8F5E8;">Teknoloji ve Platformlar</a></li>
                      <li><a href="roadmap.html" style="color: #E8F5E8;">Geliştirme Yol Haritası</a></li>
@@ -1246,6 +1252,29 @@
             const isEmailValid = validateEmail(emailInput);
 
             if (isNameValid && isEmailValid) {
+               // Capture GCLID data if available
+               const formData = {
+                  name: nameInput.value.trim(),
+                  email: emailInput.value.trim(),
+                  formType: 'signup'
+               };
+               
+               // Add GCLID information if available
+               if (window.GclidTracker) {
+                  const gclidData = window.GclidTracker.getFormData();
+                  Object.assign(formData, gclidData);
+                  
+                  // Update hidden inputs
+                  const gclidInput = document.getElementById('gclidInput');
+                  const gclidTimestamp = document.getElementById('gclidTimestamp');
+                  if (gclidInput && gclidData.gclid) {
+                     gclidInput.value = gclidData.gclid;
+                  }
+                  if (gclidTimestamp && gclidData.gclid_timestamp) {
+                     gclidTimestamp.value = gclidData.gclid_timestamp;
+                  }
+               }
+               
                // Show success modal
                document.getElementById('registeredName').textContent = nameInput.value.trim();
                document.getElementById('registeredEmail').textContent = emailInput.value.trim();
@@ -1341,9 +1370,9 @@
    });
    </script>
    <!-- Cookie Alert -->
-   <div class="cookiealert shadow-lg show">
+   <div class="cookiealert shadow-lg">
       <h4 class="text-white"><i class="ti ti-cookie"></i> Çerez Uyarısı</h4>
-      <p class="mb-4 text-white">Web sitemizde en iyi deneyimi yaşamanız için çerezleri kullanıyoruz. Devam ederek çerez kullanımını kabul etmiş olursunuz. <a href="#" target="_blank">Çerez Politikası</a> için tıklayın.</p>
+      <p class="mb-4 text-white">Web sitemizde en iyi deneyimi yaşamanız için çerezleri kullanıyoruz. Devam ederek çerez kullanımını kabul etmiş olursunuz. <a href="privacy-policy.html" target="_blank">Çerez Politikası</a> için tıklayın.</p>
       <button class="btn btn-dark btn-sm acceptcookies" type="button" aria-label="Close">Kabul Et</button>
    </div>
 
