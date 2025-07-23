@@ -1,0 +1,34 @@
+Adapt the uploaded HTML template files for the website reelrusher.com. Follow these exact instructions:
+
+1. Do NOT change HTML structure or CSS class names.
+2. Do NOT redesign or rewrite layout. Only replace placeholder content.
+3. Return each file separately with the original filename.
+
+Project Specs:
+- Domain: reelrusher.com
+- Language: Turkish (TR)
+- Geo: Turkey
+- Contact email: info@[yourdomain].com
+- Theme: Landing page for a browser/mobile puzzle game (Match-3 + Zuma hybrid with pyramid-shaped board)
+
+Pages (in TR):
+1. Ana Sayfa – Homepage with teaser and email form
+2. Oyun Mekanikleri
+3. Oyun Sanatı ve Kapaklar
+4. Geliştirici Ekibi
+5. Geliştirme Yol Haritası (ends in 2026)
+6. Hakkımızda
+7. Teknoloji ve Platformlar
+8. İletişim (with contact form)
+
+Navigation:
+- Add dropdown “Oyun Hakkında” with:
+  * Oyun Mekanikleri
+  * Oyun Sanatı ve Kapaklar
+  * Geliştirici Ekibi
+  * Teknoloji ve Platformlar
+
+CPA:
+Add form with TR text: “Erken erişim kazanmak için e-posta adresini bırak!” on homepage (and optionally footer).
+
+Final Note: Keep everything else as in the template. Just adapt content.

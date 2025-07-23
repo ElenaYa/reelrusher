@@ -1,0 +1,795 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="ReelRusher - Match-3 Zuma Tarzı Puzzle Oyunu">
+
+   <!-- Title & Favicon -->
+   <title>Geliştirme Yol Haritası | ReelRusher - Match-3 Zuma Tarzı Puzzle Oyunu</title>
+   <link rel="shortcut icon" href="assets/favicon.png" type="image/png">
+  <script type="module" crossorigin src="assets/main-DwB1b1zN.js"></script>
+  <link rel="stylesheet" crossorigin href="assets/main-B9xypkzf.css">
+</head>
+
+<body>
+   <!-- Preloader -->
+   <div class="preloader" id="preloader">
+      <div class="spinner-grow" role="status">
+         <span class="visually-hidden">Yükleniyor...</span>
+      </div>
+   </div>
+
+ 
+   <!-- Header Area -->
+   <header class="header-area">
+      <!-- Header Top -->
+      <div class="header-top">
+         <div class="container h-100">
+            <div class="h-100 d-flex align-items-center justify-content-between">
+               <!-- Left Side Content -->
+                    <div class="left-side d-flex align-items-center gap-2 gap-md-3 gap-lg-4">
+                     <div class="d-flex align-items-center gap-1">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 18 18" fill="none">
+                        <path d="M15 13.5H13.5V6.9375L9 9.75L4.5 6.9375V13.5H3V4.5H3.9L9 7.6875L14.1 4.5H15M15 3H3C2.1675 3 1.5 3.6675 1.5 4.5V13.5C1.5 13.8978 1.65804 14.2794 1.93934 14.5607C2.22064 14.842 2.60218 15 3 15H15C15.3978 15 15.7794 14.842 16.0607 14.5607C16.342 14.2794 16.5 13.8978 16.5 13.5V4.5C16.5 4.10218 16.342 3.72064 16.0607 3.43934C15.7794 3.15804 15.3978 3 15 3Z" fill="white"></path>
+                       </svg>
+                       <a href="mailto:info@reelrusher.com" style="text-decoration:none;color:inherit;">
+                        <span class="d-none d-lg-block">info@reelrusher.com</span>
+                       </a>
+                     </div>
+
+                     <div class="d-flex align-items-center gap-1">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="11" height="18" viewbox="0 0 11 18" fill="none">
+                        <path d="M5.5 0C4.04131 0 2.64236 0.592632 1.61091 1.64752C0.579463 2.70242 0 4.13316 0 5.625C0 11.25 5.5 18 5.5 18C5.5 18 11 11.25 11 5.625C11 4.13316 10.4205 2.70242 9.38909 1.64752C8.35764 0.592632 6.95869 0 5.5 0ZM5.5 9.07088C5.05754 9.07088 4.61941 8.98174 4.21063 8.80857C3.80184 8.6354 3.43041 8.38158 3.11754 8.0616C2.80468 7.74162 2.5565 7.36175 2.38717 6.94368C2.21785 6.52561 2.1307 6.07752 2.1307 5.625C2.1307 5.17248 2.21785 4.72439 2.38717 4.30632C2.5565 3.88825 2.80468 3.50838 3.11754 3.1884C3.43041 2.86842 3.80184 2.6146 4.21063 2.44143C4.61941 2.26825 5.05754 2.17913 5.5 2.17913C6.39359 2.17913 7.25059 2.54217 7.88245 3.1884C8.51432 3.83463 8.8693 4.7111 8.8693 5.625C8.8693 6.5389 8.51432 7.41537 7.88245 8.0616C7.25059 8.70783 6.39359 9.07088 5.5 9.07088ZM3.3693 5.625C3.3693 5.04676 3.5939 4.49221 3.99369 4.08333C4.39348 3.67445 4.93571 3.44475 5.5011 3.44475C6.06649 3.44475 6.60872 3.67445 7.00851 4.08333C7.4083 4.49221 7.6329 5.04676 7.6329 5.625C7.6329 6.20324 7.4083 6.75779 7.00851 7.16667C6.60872 7.57555 6.06649 7.80525 5.5011 7.80525C4.93571 7.80525 4.39348 7.57555 3.99369 7.16667C3.5939 6.75779 3.3693 6.20324 3.3693 5.625Z" fill="white"></path>
+                       </svg>
+                       <a href="https://maps.google.com/?q=İstanbul, Türkiye" target="_blank" style="text-decoration:none;color:inherit;">
+                        <span class="d-none d-lg-block">İstanbul, Türkiye</span>
+                       </a>
+                     </div>
+
+                     <div class="d-flex align-items-center gap-1">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 18 18" fill="none">
+                        <path d="M14.9625 15.75C13.4 15.75 11.8562 15.4092 10.3312 14.7277C8.80625 14.0462 7.41875 13.0807 6.16875 11.8312C4.91875 10.5813 3.95325 9.19375 3.27225 7.66875C2.59125 6.14375 2.2505 4.6 2.25 3.0375C2.25 2.8125 2.325 2.625 2.475 2.475C2.625 2.325 2.8125 2.25 3.0375 2.25H6.075C6.25 2.25 6.40625 2.3095 6.54375 2.4285C6.68125 2.5475 6.7625 2.688 6.7875 2.85L7.275 5.475C7.3 5.675 7.29375 5.84375 7.25625 5.98125C7.21875 6.11875 7.15 6.2375 7.05 6.3375L5.23125 8.175C5.48125 8.6375 5.778 9.08425 6.1215 9.51525C6.465 9.94625 6.84325 10.362 7.25625 10.7625C7.64375 11.15 8.05 11.5095 8.475 11.841C8.9 12.1725 9.35 12.4755 9.825 12.75L11.5875 10.9875C11.7 10.875 11.847 10.7905 12.0285 10.734C12.21 10.6775 12.388 10.662 12.5625 10.6875L15.15 11.2125C15.325 11.2625 15.4688 11.3532 15.5812 11.4847C15.6937 11.6163 15.75 11.763 15.75 11.925V14.9625C15.75 15.1875 15.675 15.375 15.525 15.525C15.375 15.675 15.1875 15.75 14.9625 15.75ZM4.51875 6.75L5.75625 5.5125L5.4375 3.75H3.76875C3.83125 4.2625 3.91875 4.76875 4.03125 5.26875C4.14375 5.76875 4.30625 6.2625 4.51875 6.75ZM11.2313 13.4625C11.7188 13.675 12.2157 13.8438 12.7222 13.9688C13.2287 14.0938 13.738 14.175 14.25 14.2125V12.5625L12.4875 12.2062L11.2313 13.4625Z" fill="white"></path>
+                       </svg>
+                       <a href="tel:+905324176488" style="text-decoration:none;color:inherit;">
+                        <span class="d-none d-lg-block">+90 532 417 64 88</span>
+                       </a>
+                     </div>
+                    </div>
+
+               <!-- Right Side Content -->
+             
+            </div>
+         </div>
+      </div>
+
+      <!-- Navbar -->
+      <div class="container">
+         <nav class="navbar navbar-expand-xl">
+            <!-- Navbar Brand -->
+            <a class="navbar-brand" href="index.html">
+               <img src="assets/nav-brand.png" alt="ReelRusher" style="width: auto; height: 60px;">
+            </a>
+
+            <!-- Navbar Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#fandiNav" aria-controls="fandiNav" aria-expanded="false" aria-label="Toggle navigation">
+               <i class="ti ti-menu-deep"></i>
+            </button>
+
+            <!-- Navbar Nav -->
+            <div class="collapse navbar-collapse justify-content-end" id="fandiNav">
+               <ul class="navbar-nav align-items-xl-center navbar-nav-scroll mt-4 mt-xl-0">
+                  <li>
+                     <a href="index.html">Ana Sayfa</a>
+                  </li>
+                  <li class="fandi-dd">
+                     <a href="#">Oyun Hakkında <i class="ti ti-chevron-down"></i></a>
+                     <ul class="fandi-dd-menu">
+                        <li>
+                           <a href="mechanics.html">Oyun Mekanikleri</a>
+                        </li>
+                        <li>
+                           <a href="game-art.html">Oyun Sanatı ve Kapaklar</a>
+                        </li>
+                        <li>
+                           <a href="team.html">Geliştirici Ekibi</a>
+                        </li>
+                        <li>
+                           <a href="technology.html">Teknoloji ve Platformlar</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="active">
+                     <a href="roadmap.html">Geliştirme Yol Haritası</a>
+                  </li>
+                  <li>
+                     <a href="about-us.html">Hakkımızda</a>
+                  </li>
+                  <li>
+                     <a href="contact.html">İletişim</a>
+                  </li>
+               </ul>
+
+            </div>
+         </nav>
+      </div>
+   </header>
+
+
+   <!-- Hero Section -->
+   <section class="hero-section">
+      <!-- Divider -->
+      <div class="divider"></div>
+
+      <!-- Right Side Image -->
+      <div class="right-side-img jarallax wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1000ms">
+         <img class="jarallax-img" src="assets/66-C-J7Zm5B.jpg" alt="">
+      </div>
+
+      <div class="container">
+         <div class="row align-items-center justify-content-between g-5">
+            <div class="col-12 col-lg-6">
+               <!-- Hero Content -->
+               <div class="hero-content mt-0">
+                  <h2 class="text-white mb-4 wow fadeInUp" data-wow-delay="500ms" data-wow-duration="1000ms">ReelRusher 
+                     geliştirme yol haritamızı keşfet</h2>
+                  <p class="text-white wow fadeInUp" data-wow-delay="700ms" data-wow-duration="1000ms">En heyecan verici 
+                     Match-3 Zuma puzzle oyununu yaratmak için hazırladığımız detaylı geliştirme planımızı incele.</p>
+                  <a href="#signup" class="btn btn-primary wow fadeInUp" data-wow-delay="900ms" data-wow-duration="1000ms">
+                     <span>Erken Erişim <i class="ti ti-arrow-up-right"></i></span>
+                     <span>Erken Erişim <i class="ti ti-arrow-up-right"></i></span>
+                  </a>
+               </div>
+            </div>
+
+            <div class="col-12 col-lg-6 col-xl-5 col-xxl-4">
+               <!-- Email Signup -->
+               <div class="book-consultation-card shadow wow fadeInUp" data-wow-delay="1000ms" data-wow-duration="1000ms">
+                  <h5>Erken erişim kazanmak için e-posta adresini bırak!</h5>
+                  <p class="mb-4">ReelRusher beta sürümüne ilk erişim hakkı kazan</p>
+
+                  <form action="#" id="signup">
+                     <div class="row g-4">
+                        <div class="col-12">
+                           <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Adın">
+                           </div>
+                        </div>
+                        <div class="col-12">
+                           <div class="form-group">
+                              <input type="email" class="form-control" placeholder="E-posta adresi">
+                           </div>
+                        </div>
+                        <div class="col-12">
+                           <div class="form-group">
+                              <textarea id="message2" cols="30" rows="10" class="form-control" placeholder="Mesajın (İsteğe bağlı)"></textarea>
+                           </div>
+                        </div>
+                        <div class="col-12">
+                           <button type="submit" class="btn btn-primary w-100">
+                              <span>Kayıt Ol</span>
+                              <span>Kayıt Ol</span>
+                           </button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider"></div>
+   </section>
+
+   <!-- Top Feature Section -->
+   <div class="top-feature-section">
+      <div class="container">
+         <div class="row g-4">
+            <!-- Top Feature Card -->
+            <div class="col-12 col-md-6 col-lg-4">
+               <div class="top-feature-card d-flex align-items-center gap-4 wow fadeInUp" data-wow-delay="500ms" data-wow-duration="1000ms">
+                  <div class="icon">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewbox="0 0 48 48" fill="none">
+                        <path d="M41.8691 11.6617L30.6195 0.412031C30.3527 0.145125 29.9881 0 29.625 0H9.9375C7.61128 0 5.71875 1.89253 5.71875 4.21875V43.7812C5.71875 46.1075 7.61128 48 9.9375 48H38.0625C40.3887 48 42.2812 46.1075 42.2812 43.7812V12.6562C42.2812 12.2704 42.1178 11.9103 41.8691 11.6617ZM31.0312 4.80122L37.48 11.25H32.4375C31.6621 11.25 31.0312 10.6192 31.0312 9.84375V4.80122ZM38.0625 45.1875H9.9375C9.16209 45.1875 8.53125 44.5567 8.53125 43.7812V4.21875C8.53125 3.44334 9.16209 2.8125 9.9375 2.8125H28.2188V9.84375C28.2188 12.17 30.1113 14.0625 32.4375 14.0625H39.4688V43.7812C39.4688 44.5567 38.8379 45.1875 38.0625 45.1875Z" fill="#F75709"></path>
+                        <path d="M32.4375 22.6875H18.375C17.5984 22.6875 16.9688 23.3171 16.9688 24.0938C16.9688 24.8704 17.5984 25.5 18.375 25.5H32.4375C33.2141 25.5 33.8438 24.8704 33.8438 24.0938C33.8438 23.3171 33.2141 22.6875 32.4375 22.6875Z" fill="#F75709"></path>
+                        <path d="M32.4375 28.3125H18.375C17.5984 28.3125 16.9688 28.9421 16.9688 29.7188C16.9688 30.4954 17.5984 31.125 18.375 31.125H32.4375C33.2141 31.125 33.8438 30.4954 33.8438 29.7188C33.8438 28.9421 33.2141 28.3125 32.4375 28.3125Z" fill="#F75709"></path>
+                        <path d="M32.4375 33.9375H18.375C17.5984 33.9375 16.9688 34.5671 16.9688 35.3438C16.9688 36.1204 17.5984 36.75 18.375 36.75H32.4375C33.2141 36.75 33.8438 36.1204 33.8438 35.3438C33.8438 34.5671 33.2141 33.9375 32.4375 33.9375Z" fill="#F75709"></path>
+                        <path d="M12.75 25.5C13.5267 25.5 14.1562 24.8704 14.1562 24.0938C14.1562 23.3171 13.5267 22.6875 12.75 22.6875C11.9733 22.6875 11.3438 23.3171 11.3438 24.0938C11.3438 24.8704 11.9733 25.5 12.75 25.5Z" fill="#F75709"></path>
+                        <path d="M12.75 31.125C13.5267 31.125 14.1562 30.4954 14.1562 29.7188C14.1562 28.9421 13.5267 28.3125 12.75 28.3125C11.9733 28.3125 11.3438 28.9421 11.3438 29.7188C11.3438 30.4954 11.9733 31.125 12.75 31.125Z" fill="#F75709"></path>
+                        <path d="M12.75 36.75C13.5267 36.75 14.1562 36.1204 14.1562 35.3438C14.1562 34.5671 13.5267 33.9375 12.75 33.9375C11.9733 33.9375 11.3438 34.5671 11.3438 35.3438C11.3438 36.1204 11.9733 36.75 12.75 36.75Z" fill="#F75709"></path>
+                     </svg>
+                  </div>
+                  <div>
+                     <h5>Detaylı Planlama</h5>
+                     <p class="mb-0">Her aşama dikkatli bir şekilde planlanmış ve hedeflenen tarihler belirlenmiştir.</p>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Top Feature Card -->
+            <div class="col-12 col-md-6 col-lg-4">
+               <div class="top-feature-card d-flex align-items-center gap-4 wow fadeInUp" data-wow-delay="700ms" data-wow-duration="1000ms">
+                  <div class="icon">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewbox="0 0 48 48" fill="none">
+                        <path d="M43.1847 7.77539C40.7732 6.94702 38.8414 5.00427 38.0167 2.57849C37.4923 1.03601 36.0483 0 34.4231 0H13.4832C11.8583 0 10.4139 1.03601 9.88953 2.57849C9.06482 5.00427 7.13306 6.94702 4.72156 7.77539C3.18713 8.30273 2.15625 9.7511 2.15625 11.3796V16.6769C2.15625 23.5895 4.22754 30.2454 8.14636 35.9253C11.7319 41.1222 16.6729 45.189 22.4355 47.6865C22.9178 47.8956 23.4353 48 23.9531 48C24.4706 48 24.988 47.8956 25.4703 47.6865C31.233 45.1893 36.174 41.1222 39.7595 35.9253C43.6783 30.2454 45.75 23.5891 45.75 16.6769V11.3796C45.75 9.7511 44.7191 8.30273 43.1847 7.77539ZM42.9375 16.6769C42.9375 23.016 41.038 29.1196 37.4443 34.3282C34.1583 39.0912 29.6309 42.8181 24.3519 45.1058C24.0989 45.2157 23.8077 45.2161 23.554 45.1058C18.2747 42.8181 13.7476 39.0912 10.4615 34.3282C6.86829 29.12 4.96875 23.0164 4.96875 16.6769V11.3796C4.96875 10.9519 5.23682 10.5725 5.63562 10.4355C8.86377 9.32629 11.4496 6.72766 12.5522 3.48376C12.6888 3.0824 13.0627 2.8125 13.4832 2.8125H34.4231C34.8431 2.8125 35.2174 3.0824 35.354 3.48376C36.4567 6.72766 39.0425 9.32629 42.2706 10.4355C42.6694 10.5725 42.9375 10.9519 42.9375 11.3796V16.6769Z" fill="#F75709"></path>
+                        <path d="M29.931 18.2324H29.8355V14.2275C29.8355 10.9855 27.1976 8.34766 23.9556 8.34766C20.7135 8.34766 18.0757 10.9855 18.0757 14.2275V18.2324H17.9801C16.1128 18.2324 14.5938 19.7518 14.5938 21.6191V29.7124C14.5938 33.1899 17.4231 36.0197 20.9003 36.0197H27.0109C30.4884 36.0197 33.3174 33.1899 33.3174 29.7124V21.6191C33.3174 19.7518 31.7983 18.2324 29.931 18.2324ZM20.8882 14.2275C20.8882 12.5364 22.2644 11.1602 23.9556 11.1602C25.6467 11.1602 27.023 12.5364 27.023 14.2275V18.2328H20.8882V14.2275ZM30.5049 29.7124C30.5049 31.6394 28.9375 33.2068 27.0109 33.2068H20.9003C18.9736 33.2068 17.4063 31.6394 17.4063 29.7124V21.6191C17.4063 21.3027 17.6637 21.0453 17.9801 21.0453H29.931C30.2474 21.0453 30.5049 21.3027 30.5049 21.6191V29.7124Z" fill="#F75709"></path>
+                        <path d="M23.9531 24.3926C23.1764 24.3926 22.5469 25.0221 22.5469 25.7988V28.4557C22.5469 29.2324 23.1764 29.8619 23.9531 29.8619C24.7299 29.8619 25.3594 29.2324 25.3594 28.4557V25.7988C25.3594 25.0221 24.7299 24.3926 23.9531 24.3926Z" fill="#F75709"></path>
+                     </svg>
+                  </div>
+                  <div>
+                     <h5>Güvenli Geliştirme</h5>
+                     <p class="mb-0">Oyunun güvenilirliği ve performansı her aşamada test edilmektedir.</p>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Top Feature Card -->
+            <div class="col-12 col-md-6 col-lg-4">
+               <div class="top-feature-card d-flex align-items-center gap-4 wow fadeInUp" data-wow-delay="900ms" data-wow-duration="1000ms">
+                  <div class="icon">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewbox="0 0 48 48" fill="none">
+                        <path d="M47.9201 27.1997L44.2766 6.53572C43.7813 3.72817 41.094 1.84666 38.2869 2.34178L7.03665 7.85217C4.229 8.3472 2.34759 11.034 2.84262 13.8416L3.11034 15.3602C1.28185 16.1578 0 17.9821 0 20.1012V40.5678C0 43.4187 2.31939 45.7381 5.17028 45.7381H36.1919C39.0428 45.7381 41.3622 43.4187 41.3622 40.5678V33.606L43.7261 33.1892C45.0861 32.9493 46.2713 32.1943 47.0635 31.0629C47.8557 29.9317 48.1599 28.5596 47.9201 27.1997ZM44.7534 29.4454C44.3934 29.9596 43.8546 30.3028 43.2364 30.4119L41.3622 30.7423V29.135V22.738V20.1011C41.3622 17.2502 39.0428 14.9308 36.1919 14.9308H5.89844L5.62 13.3518C5.51095 12.7337 5.64933 12.11 6.00936 11.5957C6.3694 11.0815 6.90824 10.7383 7.52642 10.6293L38.7767 5.11897C38.9142 5.09472 39.0509 5.08306 39.186 5.08306C40.3043 5.08306 41.2986 5.88662 41.4993 7.0253L45.1428 27.6893C45.2518 28.3076 45.1135 28.9312 44.7534 29.4454ZM36.1919 42.9179H5.17028C3.87442 42.9179 2.82015 41.8637 2.82015 40.5678V30.5451H38.5421V40.5677C38.5421 41.8637 37.4878 42.9179 36.1919 42.9179ZM5.17028 17.7511H36.1919C37.4878 17.7511 38.5421 18.8053 38.5421 20.1012V21.328H2.82015V20.1012C2.82015 18.8053 3.87442 17.7511 5.17028 17.7511ZM38.5421 24.1481V27.725H2.82015V24.1481H38.5421Z" fill="#F75709"></path>
+                        <path d="M13.5727 37.2549H7.1757C6.39696 37.2549 5.76562 37.8862 5.76562 38.665C5.76562 39.4437 6.39696 40.075 7.1757 40.075H13.5727C14.3515 40.075 14.9828 39.4437 14.9828 38.665C14.9828 37.8862 14.3515 37.2549 13.5727 37.2549Z" fill="#F75709"></path>
+                     </svg>
+                  </div>
+                  <div>
+                     <h5>Şeffaf Süreç</h5>
+                     <p class="mb-0">Geliştirme sürecindeki her adımı toplulukla paylaşıyoruz.</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="container">
+      <hr class="m-0">
+   </div>
+
+   <!-- Development Progress Section -->
+   <section class="strategies-section bg-white">
+      <!-- Divider -->
+      <div class="divider"></div>
+
+      <div class="container">
+         <div class="row g-5 align-items-center">
+            <div class="col-12 col-md-6">
+               <!-- Strategies Image Wrap -->
+               <div class="strategies-img-wrap mb-5">
+                  <div class="shape">
+                     <img src="" alt="">
+                  </div>
+
+                  <div class="shape2">
+                     <img src="" alt="">
+                  </div>
+
+                  <!-- Image -->
+                  <div class="strategies-img style-three">
+                     <img src="assets/67-VAtGIFXV.jpg" alt="">
+                  </div>
+
+                  <!-- Image -->
+                  <div class="strategies-img style-two">
+                     <img src="assets/68-D5yKXwNw.jpg" alt="">
+
+                     <!-- Play Video -->
+                     <div class="play-video-btn video-btn" data-video="https://youtu.be/VCPGMjCW0is">
+                        <div class="icon">
+                           <i class="ti ti-player-play-filled"></i>
+                        </div>
+                        <!-- Video Sonar -->
+                        <div class="video-sonar"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+               <div class="ps-xl-5">
+                  <div class="section-heading">
+                     <h2 class="mb-3">Güvenilir geliştirme süreci</h2>
+                     <p class="mb-0">3 yılı aşkın oyun geliştirme deneyimimizle, binlerce saatlik çalışma sonucu 
+                        oluşturduğumuz detaylı roadmap'i takip ediyoruz.</p>
+                  </div>
+
+                  <div class="d-flex align-items-center gap-4 gap-xl-5 my-5">
+                     <div>
+                        <h1><span class="counter">75</span>%</h1>
+                        <p class="mb-0">Tamamlanan</p>
+                     </div>
+                     <div class="vr-line"></div>
+                     <div>
+                        <h1><span class="counter">2</span></h1>
+                        <p class="mb-0">Ay Kaldı</p>
+                     </div>
+                  </div>
+
+                  <a href="#roadmap-details" class="btn btn-primary">
+                     <span>Detayları Gör <i class="ti ti-arrow-up-right"></i></span>
+                     <span>Detayları Gör <i class="ti ti-arrow-up-right"></i></span>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider"></div>
+   </section>
+
+   <!-- Roadmap Details Section -->
+   <section class="features-section bg-secondary" id="roadmap-details">
+      <!-- Divider -->
+      <div class="divider"></div>
+
+      <div class="container">
+         <div class="row justify-content-center">
+            <div class="col-12 col-sm-9 col-lg-6">
+               <div class="section-heading text-center">
+                  <h2 class="mb-0">Geliştirme aşamalarımız</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="divider-sm"></div>
+
+      <div class="container">
+         <div class="row g-4">
+
+            <!-- Features Card -->
+            <div class="col-12 col-sm-6 col-lg-3">
+               <div class="features-card">
+                  <div class="icon">
+                     <i class="flaticon-planning"></i>
+                  </div>
+                  <h5>Konsept ve Tasarım</h5>
+                  <p class="mb-4">Oyun mekaniklerinin belirlenmesi, karakter tasarımları ve görsel kimlик çalışmaları.</p>
+                  <a href="#" class="btn-style-two">
+                     <span>Tamamlandı</span>
+                     <i class="ti ti-check"></i>
+                  </a>
+               </div>
+            </div>
+
+            <!-- Features Card -->
+            <div class="col-12 col-sm-6 col-lg-3">
+               <div class="features-card">
+                  <div class="icon">
+                     <i class="flaticon-tax"></i>
+                  </div>
+                  <h5>Core Development</h5>
+                  <p class="mb-4">Oyun motorunun kodlanması, temel mekaniлerin implementasyonu ve ilk test versiyonu.</p>
+                  <a href="#" class="btn-style-two">
+                     <span>Devam Ediyor</span>
+                     <i class="ti ti-loader"></i>
+                  </a>
+               </div>
+            </div>
+
+            <!-- Features Card -->
+            <div class="col-12 col-sm-6 col-lg-3">
+               <div class="features-card">
+                  <div class="icon">
+                     <i class="flaticon-return-on-investment"></i>
+                  </div>
+                  <h5>Beta Test</h5>
+                  <p class="mb-4">Kapsamlı testler, hata düzeltmeleri ve oyuncu geri bildirimlerinin değerlendirilmesi.</p>
+                  <a href="#" class="btn-style-two">
+                     <span>Planlanan</span>
+                     <i class="ti ti-clock"></i>
+                  </a>
+               </div>
+            </div>
+
+            <!-- Features Card -->
+            <div class="col-12 col-sm-6 col-lg-3">
+               <div class="features-card">
+                  <div class="icon">
+                     <i class="flaticon-risk-management"></i>
+                  </div>
+                  <h5>Lansman</h5>
+                  <p class="mb-4">Final optimizasyonlar, platform entegrasyonları ve oyunun resmi olarak yayınlanması.</p>
+                  <a href="#" class="btn-style-two">
+                     <span>2024 Q4</span>
+                     <i class="ti ti-calendar"></i>
+                  </a>
+               </div>
+            </div>
+
+            <!-- Features Card -->
+            <div class="col-12 col-sm-6 col-lg-3">
+               <div class="features-card">
+                  <div class="icon">
+                     <i class="flaticon-planning"></i>
+                  </div>
+                  <h5>Level Editor</h5>
+                  <p class="mb-4">Oyuncuların kendi seviyelerini oluşturabileceği özel editör aracının geliştirilmesi.</p>
+                  <a href="#" class="btn-style-two">
+                     <span>Planlanan</span>
+                     <i class="ti ti-clock"></i>
+                  </a>
+               </div>
+            </div>
+
+            <!-- Features Card -->
+            <div class="col-12 col-sm-6 col-lg-3">
+               <div class="features-card">
+                  <div class="icon">
+                     <i class="flaticon-tax"></i>
+                  </div>
+                  <h5>Multiplayer Mode</h5>
+                  <p class="mb-4">Arkadaşlarla birlikte oynayabileceğiniz çok oyunculu mod ve rekabet sistemi.</p>
+                  <a href="#" class="btn-style-two">
+                     <span>2025 Q1</span>
+                     <i class="ti ti-calendar"></i>
+                  </a>
+               </div>
+            </div>
+
+            <!-- Features Card -->
+            <div class="col-12 col-lg-6">
+               <div class="features-card-two flex-wrap flex-md-nowrap">
+                  <!-- Image Wrap -->
+                  <div class="img-wrap">
+                     <img src="assets/69-Dh07jmdF.jpg" alt="">
+                  </div>
+                  <!-- Content -->
+                  <div>
+                     <h5 class="text-white">7/24 Topluluk Desteği</h5>
+                     <p class="mb-4 text-white">Geliştirme sürecindeki her aşamada topluluktan gelen geri bildirimler 
+                        bizim için çok değerli.</p>
+                     <a href="#" class="btn btn-primary">
+                        <span>Discord'a Katıl <i class="ti ti-arrow-up-right"></i></span>
+                        <span>Discord'a Katıl <i class="ti ti-arrow-up-right"></i></span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider"></div>
+   </section>
+
+   <!-- Process Section -->
+   <section class="process-section">
+      <!-- Divider -->
+      <div class="divider"></div>
+
+      <div class="container">
+         <div class="row justify-content-center">
+            <div class="col-12 col-sm-9 col-lg-6">
+               <div class="section-heading text-center">
+                  <h2 class="mb-0">Oyunu deneyimlemenin kolay yolu</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="divider-sm"></div>
+
+      <div class="container">
+         <div class="row g-4 g-lg-0">
+
+            <!-- Process Card -->
+            <div class="col-12 col-sm-6 col-lg-3">
+               <div class="process-card wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1000ms">
+                  <div class="step-number">
+                     <h2>01</h2>
+                  </div>
+                  <div class="step-border">
+                     <span></span>
+                  </div>
+                  <div class="process-body">
+                     <h5>E-posta Kaydı</h5>
+                     <p class="mb-0">E-posta adresini bırak ve erken erişim listesine katıl.</p>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Process Card -->
+            <div class="col-12 col-sm-6 col-lg-3">
+               <div class="process-card wow fadeInUp" data-wow-delay="500ms" data-wow-duration="1000ms">
+                  <div class="step-number">
+                     <h2>02</h2>
+                  </div>
+                  <div class="step-border">
+                     <span></span>
+                  </div>
+                  <div class="process-body">
+                     <h5>Beta Daveti</h5>
+                     <p class="mb-0">Oyun hazır olduğunda ilk beta davetini al.</p>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Process Card -->
+            <div class="col-12 col-sm-6 col-lg-3">
+               <div class="process-card wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1000ms">
+                  <div class="step-number">
+                     <h2>03</h2>
+                  </div>
+                  <div class="step-border">
+                     <span></span>
+                  </div>
+                  <div class="process-body">
+                     <h5>Oyunu Dene</h5>
+                     <p class="mb-0">Beta versiyonunu oyna ve geri bildirimlerini paylaş.</p>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Process Card -->
+            <div class="col-12 col-sm-6 col-lg-3">
+               <div class="process-card wow fadeInUp" data-wow-delay="700ms" data-wow-duration="1000ms">
+                  <div class="step-number">
+                     <h2>04</h2>
+                  </div>
+                  <div class="step-border">
+                     <span></span>
+                  </div>
+                  <div class="process-body">
+                     <h5>Lansmanı Yakala</h5>
+                     <p class="mb-0">Final versiyona ilk erişim hakkını kazan.</p>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider"></div>
+   </section>
+
+   <!-- Cool Facts -->
+   <section class="cool-facts-section style-four">
+      <!-- Divider -->
+      <div class="divider"></div>
+
+      <div class="container">
+         <!-- Cool Facts Card -->
+         <div class="cool-facts-card">
+            <!-- Cool Fact Card -->
+            <div class="cool-fact-card wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1000ms">
+               <h2 class="mb-0"><span class="counter">6</span>+</h2>
+               <h4>Ay Geliştirme Süresi</h4>
+               <p class="mb-0">Profesyonel ve tutku dolu ekibimizle, kaliteli bir oyun deneyimi yaratmak için 
+                  çalışıyoruz.</p>
+            </div>
+
+            <!-- Cool Fact Line -->
+            <div class="cf-line wow fadeInUp" data-wow-delay="500ms" data-wow-duration="1000ms"></div>
+
+            <!-- Cool Fact Card -->
+            <div class="cool-fact-card wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1000ms">
+               <h2 class="mb-0"><span class="counter">100</span>+</h2>
+               <h4>Oyun Seviyesi</h4>
+               <p class="mb-0">Lansmanda 100'den fazla benzersiz seviye ile oyuncuların karşısına çıkacağız.</p>
+            </div>
+
+            <!-- Cool Fact Line -->
+            <div class="cf-line wow fadeInUp" data-wow-delay="700ms" data-wow-duration="1000ms"></div>
+
+            <div class="cool-fact-card wow fadeInUp" data-wow-delay="800ms" data-wow-duration="1000ms">
+               <h2 class="mb-0"><span class="counter">50</span>+</h2>
+               <h4>Beta Test Kullanıcısı</h4>
+               <p class="mb-0">Geri bildirimlerini alacağımız özel beta test topluluğumuza katıl.</p>
+            </div>
+         </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider"></div>
+   </section>
+
+   <!-- FAQ Wrapper -->
+   <section class="faq-section bg-secondary">
+      <!-- Divider -->
+      <div class="divider"></div>
+
+      <div class="container">
+         <div class="row g-5">
+            <!-- Section Heading -->
+            <div class="col-12 col-md-6">
+               <div class="section-heading pe-xl-5">
+                  <h2 class="mb-4">Sıkça sorulan sorular</h2>
+                  <p class="mb-5">ReelRusher'ın geliştirme süreci ve lansmanı hakkında merak ettiğin soruların 
+                     cevapları burada.</p>
+                  <a href="#" class="btn btn-primary">
+                     <span>Daha Fazla Soru <i class="ti ti-arrow-up-right"></i></span>
+                     <span>Daha Fazla Soru <i class="ti ti-arrow-up-right"></i></span>
+                  </a>
+               </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+               <!-- FAQ Accordion -->
+               <div class="faq-accordion theme-two">
+                  <div class="accordion" id="faqAccordion-two">
+                     <!-- Accordion Item -->
+                     <div class="accordion-item">
+                        <div class="accordion-header">
+                           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqQuestion4" aria-expanded="true" aria-controls="faqQuestion4">
+                              ReelRusher ne zaman çıkacak?
+                           </button>
+                        </div>
+                        <div id="faqQuestion4" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion-two">
+                           <div class="accordion-body">
+                              ReelRusher'ın beta versiyonu 2024 yılının son çeyreğinde yayınlanacak. 
+                              E-posta listesine kayıt olarak ilk bildirim alan kişiler arasında olabilirsin.
+                           </div>
+                        </div>
+                     </div>
+
+                     <!-- Accordion Item -->
+                     <div class="accordion-item">
+                        <div class="accordion-header">
+                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqQuestion5" aria-expanded="false" aria-controls="faqQuestion5">
+                              Hangi platformlarda oynanabilecek?
+                           </button>
+                        </div>
+                        <div id="faqQuestion5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion-two">
+                           <div class="accordion-body">
+                              ReelRusher, web tarayıcıları ve mobil cihazlar için optimize edilmiş bir oyun. 
+                              iOS, Android ve tüm modern web tarayıcılarında oynanabilecek.
+                           </div>
+                        </div>
+                     </div>
+
+                     <!-- Accordion Item -->
+                     <div class="accordion-item">
+                        <div class="accordion-header">
+                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqQuestion6" aria-expanded="false" aria-controls="faqQuestion6">
+                              Beta testine nasıl katılabilirim?
+                           </button>
+                        </div>
+                        <div id="faqQuestion6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion-two">
+                           <div class="accordion-body">
+                              E-posta adresini kayıt ettirerek erken erişim listesine katılabilirsin. 
+                              Beta test için ilk 50 kişi seçilecek ve özel davet alacak.
+                           </div>
+                        </div>
+                     </div>
+
+                     <!-- Accordion Item -->
+                     <div class="accordion-item">
+                        <div class="accordion-header">
+                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqQuestion7" aria-expanded="false" aria-controls="faqQuestion7">
+                              Oyun ücretsiz mi olacak?
+                           </button>
+                        </div>
+                        <div id="faqQuestion7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion-two">
+                           <div class="accordion-body">
+                              ReelRusher tamamen ücretsiz bir oyun olacak. Reklam destekli model ile 
+                              oyuncularımıza bedava eğlence sunmayı planlıyoruz.
+                           </div>
+                        </div>
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider"></div>
+   </section>
+
+ <!-- Footer Section -->
+   <footer class="footer-section" style="background-color: #174035;">
+      <!-- Divider -->
+      <div class="divider"></div>
+
+      <div class="container">
+         <div class="row g-5">
+            <!-- Footer Card -->
+            <div class="col-12 col-md-4">
+               <div class="footer-card">
+                  <a href="index.html" class="footer-logo mb-4">
+                     <img src="assets/nav-brand-footer.png" alt="ReelRusher">
+                  </a>
+                  <p style="color: #E8F5E8;">ReelRusher - Match-3 ve Zuma mekaniklerini birleştiren, piramit şeklinde tahta ile benzersiz bir puzzle oyun deneyimi.</p>
+                
+               </div>
+            </div>
+
+            <!-- Footer Card -->
+            <div class="col-12 col-md">
+               <div class="footer-card">
+                  <h4 class="mb-4" style="color: #FFFFFF;">Oyun Hakkında</h4>
+                  <ul class="list-unstyled footer-nav-two">
+                     <li><a href="mechanics.html" style="color: #E8F5E8;">Oyun Mekanikleri</a></li>
+                     <li><a href="game-arts.html" style="color: #E8F5E8;">Oyun Sanatı ve Kapaklar</a></li>
+                     <li><a href="team.html" style="color: #E8F5E8;">Geliştirici Ekibi</a></li>
+                     <li><a href="technology.html" style="color: #E8F5E8;">Teknoloji ve Platformlar</a></li>
+                     <li><a href="roadmap.html" style="color: #E8F5E8;">Geliştirme Yol Haritası</a></li>
+                  </ul>
+               </div>
+            </div>
+
+            <!-- Footer Card -->
+            <div class="col-12 col-md">
+               <div class="footer-card">
+                  <h4 class="mb-4" style="color: #FFFFFF;">Faydalı Bağlantılar</h4>
+                  <ul class="list-unstyled footer-nav-two">
+                     <li><a href="index.html" style="color: #E8F5E8;">Ana Sayfa</a></li>
+                     <li><a href="about-us.html" style="color: #E8F5E8;">Hakkımızda</a></li>
+                     <li><a href="contact.html" style="color: #E8F5E8;">İletişim</a></li>
+                
+                  </ul>
+               </div>
+            </div>
+
+            <!-- Footer Card -->
+            <div class="col-12 col-md">
+               <div class="footer-card">
+                  <h4 class="mb-4" style="color: #FFFFFF;">İletişim</h4>
+                  <ul class="list-unstyled footer-nav-two">
+                     <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                           <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM19.6 8.25L12.53 12.67C12.21 12.87 11.79 12.87 11.47 12.67L4.4 8.25C4.29973 8.19371 4.21192 8.11766 4.14189 8.02645C4.07186 7.93525 4.02106 7.83078 3.99258 7.71937C3.96409 7.60796 3.9585 7.49194 3.97616 7.37831C3.99381 7.26468 4.03434 7.15581 4.09528 7.0583C4.15623 6.96079 4.23632 6.87666 4.33073 6.811C4.42513 6.74533 4.53187 6.69951 4.6445 6.6763C4.75712 6.65309 4.87328 6.65297 4.98595 6.67595C5.09863 6.69893 5.20546 6.74453 5.3 6.81L12 11L18.7 6.81C18.7945 6.74453 18.9014 6.69893 19.014 6.67595C19.1267 6.65297 19.2429 6.65309 19.3555 6.6763C19.4681 6.69951 19.5749 6.74533 19.6693 6.811C19.7637 6.87666 19.8438 6.96079 19.9047 7.0583C19.9657 7.15581 20.0062 7.26468 20.0238 7.37831C20.0415 7.49194 20.0359 7.60796 20.0074 7.71937C19.9789 7.83078 19.9281 7.93525 19.8581 8.02645C19.7881 8.11766 19.7003 8.19371 19.6 8.25Z" fill="#E8F5E8"></path>
+                        </svg>
+                        <a href="mailto:info@reelrusher.com" style="color: #E8F5E8;">info@reelrusher.com</a>
+                     </li>
+                     <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                           <path d="M8.125 2C7.56141 2 7.02091 2.22388 6.6224 2.6224C6.22388 3.02091 6 3.56141 6 4.125V19.875C6 20.4386 6.22388 20.9791 6.6224 21.3776C7.02091 21.7761 7.56141 22 8.125 22H15.875C16.4386 22 16.9791 21.7761 17.3776 21.3776C17.7761 20.9791 18 20.4386 18 19.875V4.125C18 3.56141 17.7761 3.02091 17.3776 2.6224C16.9791 2.22388 16.4386 2 15.875 2H8.125ZM10.625 17.75H13.375C13.5408 17.75 13.6997 17.8158 13.8169 17.9331C13.9342 18.0503 14 18.2092 14 18.375C14 18.5408 13.9342 18.6997 13.8169 18.8169C13.6997 18.9342 13.5408 19 13.375 19H10.625C10.4592 19 10.3003 18.9342 10.1831 18.8169C10.0658 18.6997 10 18.5408 10 18.375C10 18.2092 10.0658 18.0503 10.1831 17.9331C10.3003 17.8158 10.4592 17.75 10.625 17.75Z" fill="#E8F5E8"></path>
+                        </svg>
+                        <a href="tel:+905324176488" style="color: #E8F5E8;">+90 532 417 64 88</a>
+                     </li>
+                     <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                           <path d="M12 10.5C12.8284 10.5 13.5 9.82843 13.5 9C13.5 8.17157 12.8284 7.5 12 7.5C11.1716 7.5 10.5 8.17157 10.5 9C10.5 9.82843 11.1716 10.5 12 10.5Z" fill="#E8F5E8"></path>
+                           <path d="M12 1.5C7.86469 1.5 4.5 4.71797 4.5 8.67188C4.5 10.5548 5.35828 13.0589 7.05094 16.1147C8.41031 18.5681 9.98297 20.7867 10.8009 21.8906C10.9392 22.0792 11.1199 22.2326 11.3284 22.3384C11.537 22.4441 11.7676 22.4992 12.0014 22.4992C12.2352 22.4992 12.4658 22.4441 12.6744 22.3384C12.8829 22.2326 13.0637 22.0792 13.2019 21.8906C14.0184 20.7867 15.5925 18.5681 16.9519 16.1147C18.6417 13.0598 19.5 10.5558 19.5 8.67188C19.5 4.71797 16.1353 1.5 12 1.5ZM12 12C11.4067 12 10.8266 11.8241 10.3333 11.4944C9.83994 11.1648 9.45542 10.6962 9.22836 10.1481C9.0013 9.59987 8.94189 8.99667 9.05764 8.41473C9.1734 7.83279 9.45912 7.29824 9.87868 6.87868C10.2982 6.45912 10.8328 6.1734 11.4147 6.05764C11.9967 5.94189 12.5999 6.0013 13.1481 6.22836C13.6962 6.45542 14.1648 6.83994 14.4944 7.33329C14.8241 7.82664 15 8.40666 15 9C14.9991 9.79538 14.6828 10.5579 14.1204 11.1204C13.5579 11.6828 12.7954 11.9991 12 12Z" fill="#E8F5E8"></path>
+                        </svg>
+                        <a href="https://maps.app.goo.gl/Y8658s8PMauVCkGe8" style="color: #E8F5E8;">Adagül Sk. No:18 D:4, İstanbul, Türkiye</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="copyright-section style-two" style="background-color: #174035;">
+         <div class="container">
+            <div class="d-flex flex-wrap justify-content-center align-items-center justify-content-md-between gap-3 gap-lg-4">
+               <!-- Copyright -->
+               <p class="mb-0 copyright justify-content-center justify-content-md-end" style="color: #E8F5E8;"><span id="year">2025</span> © 
+                  <a href="#" style="color: #FFFFFF;">ReelRusher</a>
+                  Tüm hakları saklıdır.</p>
+
+               <!-- Copyright Nav -->
+               <ul class="copyright-nav style-two justify-content-center list-unstyled d-flex flex-wrap gap-3 gap-lg-4">
+                  <li><a href="privacy-policy.html" style="color: #E8F5E8;">Gizlilik ve Çerez Politikası</a></li>
+                  <li><a href="terms-of-use.html" style="color: #E8F5E8;">Kullanım Koşulları</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </footer>
+
+   <!-- Cookie Alert -->
+   <div class="cookiealert shadow-lg show">
+      <h4 class="text-white"><i class="ti ti-cookie"></i> Çerez Bildirimi</h4>
+      <p class="mb-4 text-white">Web sitemizde en iyi deneyimi sunmak, sosyal medya özellikleri için ve trafiği analiz etmek 
+         amacıyla çerezler kullanıyoruz. <a href="#" target="_blank">Çerez Politikası</a>'nı inceleyin.</p>
+      <button class="btn btn-dark btn-sm acceptcookies" type="button" aria-label="Close">Kabul Et</button>
+   </div>
+
+   <!-- Scroll To Top -->
+   <button id="scrollTopButton" class="fandi-scrolltop scrolltop-hide">
+      <i class="ti ti-arrow-up"></i>
+   </button>
+
+</body>
+
+</html>

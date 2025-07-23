@@ -1,0 +1,800 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="ReelRusher - Teknoloji ve Platformlar | Match-3 + Zuma hibrit oyunu">
+
+   <!-- Title & Favicon -->
+   <title>Teknoloji ve Platformlar | ReelRusher - Match-3 Puzzle Oyunu</title>
+   <link rel="shortcut icon" href="assets/favicon.png" type="image/png">
+  <script type="module" crossorigin src="assets/main-DwB1b1zN.js"></script>
+  <link rel="stylesheet" crossorigin href="assets/main-B9xypkzf.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+   <div class="preloader" id="preloader">
+      <div class="spinner-grow" role="status">
+         <span class="visually-hidden">Yükleniyor...</span>
+      </div>
+   </div>
+   <!-- Header Area -->
+   <header class="header-area">
+      <!-- Header Top -->
+      <div class="header-top">
+         <div class="container h-100">
+            <div class="h-100 d-flex align-items-center justify-content-between">
+               <!-- Left Side Content -->
+                    <div class="left-side d-flex align-items-center gap-2 gap-md-3 gap-lg-4">
+                     <div class="d-flex align-items-center gap-1">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 18 18" fill="none">
+                        <path d="M15 13.5H13.5V6.9375L9 9.75L4.5 6.9375V13.5H3V4.5H3.9L9 7.6875L14.1 4.5H15M15 3H3C2.1675 3 1.5 3.6675 1.5 4.5V13.5C1.5 13.8978 1.65804 14.2794 1.93934 14.5607C2.22064 14.842 2.60218 15 3 15H15C15.3978 15 15.7794 14.842 16.0607 14.5607C16.342 14.2794 16.5 13.8978 16.5 13.5V4.5C16.5 4.10218 16.342 3.72064 16.0607 3.43934C15.7794 3.15804 15.3978 3 15 3Z" fill="white"></path>
+                       </svg>
+                       <a href="mailto:info@reelrusher.com" style="text-decoration:none;color:inherit;">
+                        <span class="d-none d-lg-block">info@reelrusher.com</span>
+                       </a>
+                     </div>
+
+                     <div class="d-flex align-items-center gap-1">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="11" height="18" viewbox="0 0 11 18" fill="none">
+                        <path d="M5.5 0C4.04131 0 2.64236 0.592632 1.61091 1.64752C0.579463 2.70242 0 4.13316 0 5.625C0 11.25 5.5 18 5.5 18C5.5 18 11 11.25 11 5.625C11 4.13316 10.4205 2.70242 9.38909 1.64752C8.35764 0.592632 6.95869 0 5.5 0ZM5.5 9.07088C5.05754 9.07088 4.61941 8.98174 4.21063 8.80857C3.80184 8.6354 3.43041 8.38158 3.11754 8.0616C2.80468 7.74162 2.5565 7.36175 2.38717 6.94368C2.21785 6.52561 2.1307 6.07752 2.1307 5.625C2.1307 5.17248 2.21785 4.72439 2.38717 4.30632C2.5565 3.88825 2.80468 3.50838 3.11754 3.1884C3.43041 2.86842 3.80184 2.6146 4.21063 2.44143C4.61941 2.26825 5.05754 2.17913 5.5 2.17913C6.39359 2.17913 7.25059 2.54217 7.88245 3.1884C8.51432 3.83463 8.8693 4.7111 8.8693 5.625C8.8693 6.5389 8.51432 7.41537 7.88245 8.0616C7.25059 8.70783 6.39359 9.07088 5.5 9.07088ZM3.3693 5.625C3.3693 5.04676 3.5939 4.49221 3.99369 4.08333C4.39348 3.67445 4.93571 3.44475 5.5011 3.44475C6.06649 3.44475 6.60872 3.67445 7.00851 4.08333C7.4083 4.49221 7.6329 5.04676 7.6329 5.625C7.6329 6.20324 7.4083 6.75779 7.00851 7.16667C6.60872 7.57555 6.06649 7.80525 5.5011 7.80525C4.93571 7.80525 4.39348 7.57555 3.99369 7.16667C3.5939 6.75779 3.3693 6.20324 3.3693 5.625Z" fill="white"></path>
+                       </svg>
+                       <a href="https://maps.google.com/?q=İstanbul, Türkiye" target="_blank" style="text-decoration:none;color:inherit;">
+                        <span class="d-none d-lg-block">İstanbul, Türkiye</span>
+                       </a>
+                     </div>
+
+                     <div class="d-flex align-items-center gap-1">
+                       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewbox="0 0 18 18" fill="none">
+                        <path d="M14.9625 15.75C13.4 15.75 11.8562 15.4092 10.3312 14.7277C8.80625 14.0462 7.41875 13.0807 6.16875 11.8312C4.91875 10.5813 3.95325 9.19375 3.27225 7.66875C2.59125 6.14375 2.2505 4.6 2.25 3.0375C2.25 2.8125 2.325 2.625 2.475 2.475C2.625 2.325 2.8125 2.25 3.0375 2.25H6.075C6.25 2.25 6.40625 2.3095 6.54375 2.4285C6.68125 2.5475 6.7625 2.688 6.7875 2.85L7.275 5.475C7.3 5.675 7.29375 5.84375 7.25625 5.98125C7.21875 6.11875 7.15 6.2375 7.05 6.3375L5.23125 8.175C5.48125 8.6375 5.778 9.08425 6.1215 9.51525C6.465 9.94625 6.84325 10.362 7.25625 10.7625C7.64375 11.15 8.05 11.5095 8.475 11.841C8.9 12.1725 9.35 12.4755 9.825 12.75L11.5875 10.9875C11.7 10.875 11.847 10.7905 12.0285 10.734C12.21 10.6775 12.388 10.662 12.5625 10.6875L15.15 11.2125C15.325 11.2625 15.4688 11.3532 15.5812 11.4847C15.6937 11.6163 15.75 11.763 15.75 11.925V14.9625C15.75 15.1875 15.675 15.375 15.525 15.525C15.375 15.675 15.1875 15.75 14.9625 15.75ZM4.51875 6.75L5.75625 5.5125L5.4375 3.75H3.76875C3.83125 4.2625 3.91875 4.76875 4.03125 5.26875C4.14375 5.76875 4.30625 6.2625 4.51875 6.75ZM11.2313 13.4625C11.7188 13.675 12.2157 13.8438 12.7222 13.9688C13.2287 14.0938 13.738 14.175 14.25 14.2125V12.5625L12.4875 12.2062L11.2313 13.4625Z" fill="white"></path>
+                       </svg>
+                       <a href="tel:+905324176488" style="text-decoration:none;color:inherit;">
+                        <span class="d-none d-lg-block">+90 532 417 64 88</span>
+                       </a>
+                     </div>
+                    </div>
+
+               <!-- Right Side Content -->
+             
+            </div>
+         </div>
+      </div>
+
+      <!-- Navbar -->
+      <div class="container">
+         <nav class="navbar navbar-expand-xl">
+            <!-- Navbar Brand -->
+            <a class="navbar-brand" href="index.html">
+               <img src="assets/nav-brand.png" alt="ReelRusher" style="width: auto; height: 60px;">
+            </a>
+
+            <!-- Navbar Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#fandiNav" aria-controls="fandiNav" aria-expanded="false" aria-label="Toggle navigation">
+               <i class="ti ti-menu-deep"></i>
+            </button>
+
+            <!-- Navbar Nav -->
+            <div class="collapse navbar-collapse justify-content-end" id="fandiNav">
+               <ul class="navbar-nav align-items-xl-center navbar-nav-scroll mt-4 mt-xl-0">
+                  <li>
+                     <a href="index.html">Ana Sayfa</a>
+                  </li>
+                  <li class="fandi-dd active">
+                     <a href="#">Oyun Hakkında <i class="ti ti-chevron-down"></i></a>
+                     <ul class="fandi-dd-menu">
+                        <li>
+                           <a href="mechanics.html">Oyun Mekanikleri</a>
+                        </li>
+                        <li>
+                           <a href="game-art.html">Oyun Sanatı ve Kapaklar</a>
+                        </li>
+                        <li>
+                           <a href="team.html">Geliştirici Ekibi</a>
+                        </li>
+                        <li class="active">
+                           <a href="technology.html">Teknoloji ve Platformlar</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a href="roadmap.html">Geliştirme Yol Haritası</a>
+                  </li>
+                  <li>
+                     <a href="about-us.html">Hakkımızda</a>
+                  </li>
+                  <li>
+                     <a href="contact.html">İletişim</a>
+                  </li>
+               </ul>
+
+            </div>
+         </nav>
+      </div>
+   </header>
+
+
+   <!-- Hero Section -->
+   <section class="hero-section style-four">
+      <!-- Background Shape -->
+      <div class="hero-shape">
+         <img src="assets/curve-CPXwgXIM.png" alt="">
+      </div>
+
+      <div class="swiper" id="heroSwiper">
+         <div class="swiper-wrapper">
+            <!-- Hero Slide -->
+            <div class="swiper-slide hero-slide-item" style="background-image: url('assets/57-dFxusJgc.jpg');">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-12 col-lg-7">
+                        <!-- Hero Content -->
+                        <div class="hero-content mt-0 hero-slide-content">
+                           <h2 class="text-white" data-fade-in-up data-animation-delay="300ms">
+                              Smart solutions for a successful business</h2>
+                           <p class="text-white mb-5" data-fade-in-up data-animation-delay="600ms">We
+                              specialize in providing comprehensive solutions to help businesses tackle their most
+                              pressing issues and unlock new opportunities for growth.</p>
+                           <a href="contact.html" class="btn btn-primary" data-fade-in-up data-animation-delay="900ms">
+                              <span>Contact With Us <i class="ti ti-arrow-up-right"></i></span>
+                              <span>Contact With Us <i class="ti ti-arrow-up-right"></i></span>
+                           </a>
+                           <div class="divider-sm"></div>
+                           <div class="hero-imgs-group" data-fade-in-up data-animation-delay="1200ms">
+                              <div class="imgs-group">
+                                 <img src="" alt="">
+                                 <img src="" alt="">
+                                 <img src="" alt="">
+                                 <img src="" alt="">
+                              </div>
+                              <h6 class="mb-0 text-white d-none d-sm-block">More than 10k+ <br> trusted customers</h6>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Hero Slide -->
+            <div class="swiper-slide hero-slide-item" style="background-image: url('assets/57-dFxusJgc.jpg');">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-12 col-lg-7">
+                        <!-- Hero Content -->
+                        <div class="hero-content mt-0 hero-slide-content">
+                           <h2 class="text-white" data-fade-in-up data-animation-delay="300ms">
+                              Smart solutions for a successful business</h2>
+                           <p class="text-white mb-5" data-fade-in-up data-animation-delay="600ms">We
+                              specialize in providing comprehensive solutions to help businesses tackle their most
+                              pressing issues and unlock new opportunities for growth.</p>
+                           <a href="contact.html" class="btn btn-primary" data-fade-in-up data-animation-delay="900ms">
+                              <span>Contact With Us <i class="ti ti-arrow-up-right"></i></span>
+                              <span>Contact With Us <i class="ti ti-arrow-up-right"></i></span>
+                           </a>
+                           <div class="divider-sm"></div>
+                           <div class="hero-imgs-group" data-fade-in-up data-animation-delay="1200ms">
+                              <div class="imgs-group">
+                                 <img src="" alt="">
+                                 <img src="" alt="">
+                                 <img src="" alt="">
+                                 <img src="" alt="">
+                              </div>
+                              <h6 class="mb-0 text-white d-none d-sm-block">More than 10k+ <br> trusted customers</h6>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- Prev Button -->
+      <div class="hero-button-prev">
+         <i class="ti ti-arrow-left"></i>
+      </div>
+
+      <!-- Next Button -->
+      <div class="hero-button-next">
+         <i class="ti ti-arrow-right"></i>
+      </div>
+   </section>
+
+   <!-- Technology Platforms Section -->
+   <div class="partner-section bg-white mt-4 wow fadeInUp" data-wow-delay="800ms" data-wow-duration="1000ms">
+      <div class="container">
+         <div class="row justify-content-center text-center">
+            <div class="col-12 col-lg-8">
+               <h5 class="lh-base">ReelRusher, modern teknolojiler kullanılarak geliştirilmiş çoklu platform desteği sunan bir oyundur</h5>
+            </div>
+         </div>
+
+         <div class="divider-sm"></div>
+
+         <!-- Technology Platform Cards -->
+         <div class="swiper partner-swiper" id="partnerSwiperTwo">
+            <div class="swiper-wrapper">
+               <div class="partner-card swiper-slide">
+                  <img src="assets/platform-unity.png" alt="Unity 3D">
+               </div>
+               <div class="partner-card swiper-slide">
+                  <img src="assets/platform-html5.png" alt="HTML5">
+               </div>
+               <div class="partner-card swiper-slide">
+                  <img src="assets/platform-webgl.png" alt="WebGL">
+               </div>
+               <div class="partner-card swiper-slide">
+                  <img src="assets/platform-javascript.png" alt="JavaScript">
+               </div>
+               <div class="partner-card swiper-slide">
+                  <img src="assets/platform-mobile.png" alt="Mobile Ready">
+               </div>
+               <div class="partner-card swiper-slide">
+                  <img src="assets/platform-responsive.png" alt="Responsive Design">
+               </div>
+               <div class="partner-card swiper-slide">
+                  <img src="assets/platform-cross.png" alt="Cross Platform">
+               </div>
+               <div class="partner-card swiper-slide">
+                  <img src="assets/platform-web.png" alt="Web Browser">
+               </div>
+            </div>
+         </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Technology Architecture Section -->
+   <section class="strategies-section bg-white">
+      <!-- Divider -->
+      <div class="divider"></div>
+
+      <div class="container">
+         <div class="row g-5 align-items-center">
+            <div class="col-12 col-lg-6">
+               <div class="pe-xl-5">
+                  <div class="section-heading wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1000ms">
+                     <h2 class="mb-3">Modern Teknoloji Altyapısı</h2>
+                     <p class="mb-0">ReelRusher, güncel web teknolojileri ve oyun geliştirme araçları kullanılarak tasarlanmış, yüksek performanslı ve ölçeklenebilir bir oyun deneyimi sunar.</p>
+                  </div>
+
+                  <div class="divider-sm"></div>
+
+                  <!-- Strategies Card -->
+                  <div class="strategies-card wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1000ms">
+                     <div class="strategies-card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewbox="0 0 50 50" fill="none">
+                           <g clip-path="url(#clip0_1_1662)">
+                              <path d="M48.5364 12.4479L37.5533 1.46484L26.5703 12.4479H32.8463V48.5352H42.2604V12.4479H48.5364Z" stroke="white" stroke-width="2.1875" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M26.5703 21.8618H17.1562V48.535H26.5703V21.8618Z" stroke="white" stroke-width="2.1875" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M10.8828 34.4138H1.46875V48.5349H10.8828V34.4138Z" stroke="white" stroke-width="2.1875" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                           </g>
+                           <defs>
+                              <clippath id="clip0_1_1662">
+                                 <rect width="50" height="50" fill="white"></rect>
+                              </clippath>
+                           </defs>
+                        </svg>
+                     </div>
+                     <div>
+                        <h5>Ölçeklenebilir Mimari</h5>
+                        <p class="mb-0">Mikroservis mimarisi ile geliştirilmiş, yüksek performans ve güvenilirlik sağlayan altyapı.</p>
+                     </div>
+                  </div>
+
+                  <!-- Technology Architecture Card -->
+                  <div class="strategies-card mt-5 wow fadeInUp" data-wow-delay="800ms" data-wow-duration="1000ms">
+                     <div class="strategies-card-icon">
+                        <i class="ti ti-users"></i>
+                     </div>
+                     <div>
+                        <h5>Çoklu Oyuncu Desteği</h5>
+                        <p class="mb-0">Gelişmiş ağ teknolojileri ile sorunsuz çoklu oyuncu deneyimi ve gerçek zamanlı etkileşim.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+               <div class="row g-4 align-items-center">
+                  <!-- Strategies Image -->
+                  <div class="col-12 col-sm-6">
+                     <div class="strategies-img wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1000ms">
+                        <img src="assets/3-B470UruG.jpg" alt="">
+                     </div>
+                  </div>
+
+                  <!-- Strategies Image -->
+                  <div class="col-12 col-sm-6">
+                     <div class="d-flex flex-column gap-4">
+                        <div class="strategies-img wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1000ms">
+                           <img src="assets/4-GWqOG7hY.jpg" alt="">
+                        </div>
+
+                        <div class="strategies-img position-relative wow fadeInUp" data-wow-delay="800ms" data-wow-duration="1000ms">
+                           <img src="assets/5-BcGSU4Fn.jpg" alt="">
+
+                           <!-- Play Video -->
+                           <div class="play-video-btn video-btn" data-video="https://youtu.be/VCPGMjCW0is">
+                              <div class="icon">
+                                 <i class="ti ti-player-play-filled"></i>
+                              </div>
+                              <!-- Video Sonar -->
+                              <div class="video-sonar"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider"></div>
+   </section>
+
+   <!-- Technology Features Section -->
+   <section class="features-section bg-secondary">
+      <!-- Divider -->
+      <div class="divider"></div>
+
+      <div class="container">
+         <div class="row justify-content-center">
+            <div class="col-12 col-sm-8 col-lg-6">
+               <div class="section-heading text-center">
+                  <h2 class="mb-0">Teknoloji Özelliklerimiz</h2>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="divider-sm"></div>
+
+      <div class="container">
+         <div class="swiper features-swiper" id="featuresSwiper">
+            <div class="swiper-wrapper">
+
+               <!-- Technology Feature Card -->
+               <div class="swiper-slide">
+                  <div class="features-card">
+                     <div class="icon">
+                        <i class="ti ti-device-gamepad-2"></i>
+                     </div>
+                     <h5>Unity 3D Motor</h5>
+                     <p class="mb-4">Güçlü Unity 3D oyun motoru ile geliştirilmiş, yüksek performanslı ve görsel açıdan etkileyici oyun deneyimi.</p>
+                     <a href="#" class="btn-style-two">
+                        <span>Detaylar</span>
+                        <i class="ti ti-arrow-up-right"></i>
+                     </a>
+                  </div>
+               </div>
+
+               <!-- Technology Feature Card -->
+               <div class="swiper-slide">
+                  <div class="features-card">
+                     <div class="icon">
+                        <i class="ti ti-world-www"></i>
+                     </div>
+                     <h5>Web Tarayıcı Desteği</h5>
+                     <p class="mb-4">HTML5 ve WebGL teknolojileri sayesinde tüm modern web tarayıcılarında sorunsuz çalışır.</p>
+                     <a href="#" class="btn-style-two">
+                        <span>Detaylar</span>
+                        <i class="ti ti-arrow-up-right"></i>
+                     </a>
+                  </div>
+               </div>
+
+               <!-- Technology Feature Card -->
+               <div class="swiper-slide">
+                  <div class="features-card">
+                     <div class="icon">
+                        <i class="ti ti-device-mobile"></i>
+                     </div>
+                     <h5>Mobil Uyumluluk</h5>
+                     <p class="mb-4">Responsive tasarım ile hem masaüstü hem de mobil cihazlarda mükemmel oyun deneyimi.</p>
+                     <a href="#" class="btn-style-two">
+                        <span>Detaylar</span>
+                        <i class="ti ti-arrow-up-right"></i>
+                     </a>
+                  </div>
+               </div>
+
+               <!-- Technology Feature Card -->
+               <div class="swiper-slide">
+                  <div class="features-card">
+                     <div class="icon">
+                        <i class="ti ti-cloud"></i>
+                     </div>
+                     <h5>Bulut Teknolojisi</h5>
+                     <p class="mb-4">Modern bulut altyapısı ile yüksek erişilebilirlik ve güvenilir performans sağlar.</p>
+                     <a href="#" class="btn-style-two">
+                        <span>Detaylar</span>
+                        <i class="ti ti-arrow-up-right"></i>
+                     </a>
+                  </div>
+               </div>
+
+               <!-- Technology Feature Card -->
+               <div class="swiper-slide">
+                  <div class="features-card">
+                     <div class="icon">
+                        <i class="ti ti-shield-check"></i>
+                     </div>
+                     <h5>Güvenli Oyun</h5>
+                     <p class="mb-4">En son güvenlik protokolleri ile korumalı ve güvenli oyun ortamı sunar.</p>
+                     <a href="#" class="btn-style-two">
+                        <span>Detaylar</span>
+                        <i class="ti ti-arrow-up-right"></i>
+                     </a>
+                  </div>
+               </div>
+
+               <!-- Technology Feature Card -->
+               <div class="swiper-slide">
+                  <div class="features-card">
+                     <div class="icon">
+                        <i class="ti ti-bolt"></i>
+                     </div>
+                     <h5>Hızlı Yükleme</h5>
+                     <p class="mb-4">Optimize edilmiş kodlama ve sıkıştırma teknikleri ile hızlı yükleme süresi.</p>
+                     <a href="#" class="btn-style-two">
+                        <span>Detaylar</span>
+                        <i class="ti ti-arrow-up-right"></i>
+                     </a>
+                  </div>
+               </div>
+
+               <!-- Technology Feature Card -->
+               <div class="swiper-slide">
+                  <div class="features-card">
+                     <div class="icon">
+                        <i class="ti ti-refresh"></i>
+                     </div>
+                     <h5>Otomatik Güncelleme</h5>
+                     <p class="mb-4">Sürekli yeni özellikler ve iyileştirmeler ile güncel oyun deneyimi.</p>
+                     <a href="#" class="btn-style-two">
+                        <span>Detaylar</span>
+                        <i class="ti ti-arrow-up-right"></i>
+                     </a>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+
+         <div class="divider-sm"></div>
+
+         <!-- Swiper Pagination -->
+         <div class="features-pagination"></div>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider"></div>
+   </section>
+
+   <!-- About Section -->
+   <section class="about-section">
+      <!-- Divider -->
+      <div class="divider"></div>
+
+      <div class="container">
+         <div class="row align-items-center g-5">
+            <div class="col-12 col-lg-6">
+               <div class="about-img style-four pe-4 pe-xl-5">
+                  <img src="assets/58-CWYPHqtE.jpg" alt="">
+
+                  <!-- Floating Image -->
+                  <div class="floating-img">
+                     <img src="" alt="">
+                  </div>
+
+                  <!-- Floating Image -->
+                  <div class="floating-img-two">
+                     <img src="assets/60-DI3DliPe.jpg" alt="">
+                  </div>
+
+                  <!-- Counter Up -->
+                  <div class="counter-up">
+                     <h2 class="mb-0"><span class="counter">100</span>%</h2>
+                     <p class="mb-0">Uptime Garantisi</p>
+                  </div>
+               </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+               <div class="about-content">
+                  <div class="section-heading">
+                     <h2 class="mb-4">ReelRusher Teknoloji Altyapısı</h2>
+
+                     <!-- About Tabs -->
+                     <ul class="nav about-tabs nav-tabs mb-4" id="aboutTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                           <button class="active" id="about-tab1" data-bs-toggle="tab" data-bs-target="#about-tab1-pane" type="button" role="tab" aria-controls="about-tab1-pane" aria-selected="true">Altyapı</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                           <button class="" id="about-tab2" data-bs-toggle="tab" data-bs-target="#about-tab2-pane" type="button" role="tab" aria-controls="about-tab2-pane" aria-selected="false">Performans</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                           <button class="" id="about-tab3" data-bs-toggle="tab" data-bs-target="#about-tab3-pane" type="button" role="tab" aria-controls="about-tab3-pane" aria-selected="false">Güvenlik</button>
+                        </li>
+                     </ul>
+
+                     <!-- Tab Content -->
+                     <div class="tab-content" id="aboutTabContent">
+                        <!-- Tab Pane -->
+                        <div class="tab-pane fade show active" id="about-tab1-pane" role="tabpanel" aria-labelledby="about-tab1" tabindex="0">
+                           <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, se eiusmod tempor
+                              incididunt ut labore et dolore magna aliqua. Ut enim minim veniam, quis nostrud
+                              exercitation ullamco laboris.</p>
+
+                           <div class="d-flex flex-wrap align-items-center justify-content-between gap-4">
+                              <div>
+                                 <ul class="about-list">
+                                    <li>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28" fill="none">
+                                          <path d="M12.1473 23.354C12.144 23.354 12.1402 23.354 12.1369 23.354C12.0013 23.3512 11.8733 23.2932 11.7814 23.1937L2.40471 12.9978C2.24392 12.8228 2.22916 12.5592 2.36971 12.3672C2.51025 12.1758 2.76619 12.1102 2.98166 12.2108L11.5638 16.2293C11.636 16.2632 11.7213 16.2468 11.7765 16.1893L24.8676 2.50708C25.0448 2.32169 25.3346 2.30145 25.5359 2.46114C25.7371 2.62083 25.7836 2.90739 25.6431 3.12231L12.6209 23.0712C12.6023 23.1002 12.5804 23.1265 12.5563 23.1511L12.4989 23.2085C12.4054 23.3015 12.2785 23.354 12.1473 23.354Z" fill="#011832"></path>
+                                       </svg>
+                                       35+ Professional Team Members
+                                    </li>
+                                    <li>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28" fill="none">
+                                          <path d="M12.1473 23.354C12.144 23.354 12.1402 23.354 12.1369 23.354C12.0013 23.3512 11.8733 23.2932 11.7814 23.1937L2.40471 12.9978C2.24392 12.8228 2.22916 12.5592 2.36971 12.3672C2.51025 12.1758 2.76619 12.1102 2.98166 12.2108L11.5638 16.2293C11.636 16.2632 11.7213 16.2468 11.7765 16.1893L24.8676 2.50708C25.0448 2.32169 25.3346 2.30145 25.5359 2.46114C25.7371 2.62083 25.7836 2.90739 25.6431 3.12231L12.6209 23.0712C12.6023 23.1002 12.5804 23.1265 12.5563 23.1511L12.4989 23.2085C12.4054 23.3015 12.2785 23.354 12.1473 23.354Z" fill="#011832"></path>
+                                       </svg>
+                                       Any Business Problem Solving
+                                    </li>
+                                    <li>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28" fill="none">
+                                          <path d="M12.1473 23.354C12.144 23.354 12.1402 23.354 12.1369 23.354C12.0013 23.3512 11.8733 23.2932 11.7814 23.1937L2.40471 12.9978C2.24392 12.8228 2.22916 12.5592 2.36971 12.3672C2.51025 12.1758 2.76619 12.1102 2.98166 12.2108L11.5638 16.2293C11.636 16.2632 11.7213 16.2468 11.7765 16.1893L24.8676 2.50708C25.0448 2.32169 25.3346 2.30145 25.5359 2.46114C25.7371 2.62083 25.7836 2.90739 25.6431 3.12231L12.6209 23.0712C12.6023 23.1002 12.5804 23.1265 12.5563 23.1511L12.4989 23.2085C12.4054 23.3015 12.2785 23.354 12.1473 23.354Z" fill="#011832"></path>
+                                       </svg>
+                                       Implement Business Pro
+                                    </li>
+                                 </ul>
+                              </div>
+
+                              <div class="about-img-two d-flex align-items-center gap-3">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="84" height="83" viewbox="0 0 84 83" fill="none">
+                                    <path d="M77.2305 57.6251C74.6496 64.1952 70.376 69.9653 64.8437 74.3495C59.3115 78.7337 52.7176 81.5758 45.7316 82.5872C38.7456 83.5987 31.6164 82.7434 25.0678 80.1084C18.5193 77.4733 12.7847 73.1522 8.44634 67.5839C4.10801 62.0156 1.32046 55.3984 0.366761 48.4043C-0.586938 41.4102 0.32718 34.2883 3.01629 27.7617C5.7054 21.2352 10.0737 15.5365 15.6777 11.2443C21.2816 6.95212 27.9216 4.21934 34.9234 3.32346L40 43L77.2305 57.6251Z" fill="#174035"></path>
+                                    <path d="M39.8223 0.218759C46.5184 -0.484432 53.2836 0.513972 59.4911 3.12145C65.6985 5.72893 71.1474 9.86111 75.3327 15.1351C79.518 20.409 82.3043 26.6541 83.4335 33.2917C84.5626 39.9292 83.9981 46.7443 81.7921 53.1055L44 40L39.8223 0.218759Z" fill="#F75709"></path>
+                                 </svg>
+
+                                 <div>
+                                    <h3 class="mb-0">40%</h3>
+                                    <p class="mb-0">Profit Rate</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <!-- Tab Pane -->
+                        <div class="tab-pane fade" id="about-tab2-pane" role="tabpanel" aria-labelledby="about-tab2" tabindex="0">
+                           <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, se eiusmod tempor
+                              incididunt ut labore et dolore magna aliqua. Ut enim minim veniam, quis nostrud
+                              exercitation ullamco laboris.</p>
+
+                           <div class="d-flex flex-wrap align-items-center justify-content-between gap-4">
+                              <div>
+                                 <ul class="about-list">
+                                    <li>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28" fill="none">
+                                          <path d="M12.1473 23.354C12.144 23.354 12.1402 23.354 12.1369 23.354C12.0013 23.3512 11.8733 23.2932 11.7814 23.1937L2.40471 12.9978C2.24392 12.8228 2.22916 12.5592 2.36971 12.3672C2.51025 12.1758 2.76619 12.1102 2.98166 12.2108L11.5638 16.2293C11.636 16.2632 11.7213 16.2468 11.7765 16.1893L24.8676 2.50708C25.0448 2.32169 25.3346 2.30145 25.5359 2.46114C25.7371 2.62083 25.7836 2.90739 25.6431 3.12231L12.6209 23.0712C12.6023 23.1002 12.5804 23.1265 12.5563 23.1511L12.4989 23.2085C12.4054 23.3015 12.2785 23.354 12.1473 23.354Z" fill="#011832"></path>
+                                       </svg>
+                                       35+ Professional Team Members
+                                    </li>
+                                    <li>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28" fill="none">
+                                          <path d="M12.1473 23.354C12.144 23.354 12.1402 23.354 12.1369 23.354C12.0013 23.3512 11.8733 23.2932 11.7814 23.1937L2.40471 12.9978C2.24392 12.8228 2.22916 12.5592 2.36971 12.3672C2.51025 12.1758 2.76619 12.1102 2.98166 12.2108L11.5638 16.2293C11.636 16.2632 11.7213 16.2468 11.7765 16.1893L24.8676 2.50708C25.0448 2.32169 25.3346 2.30145 25.5359 2.46114C25.7371 2.62083 25.7836 2.90739 25.6431 3.12231L12.6209 23.0712C12.6023 23.1002 12.5804 23.1265 12.5563 23.1511L12.4989 23.2085C12.4054 23.3015 12.2785 23.354 12.1473 23.354Z" fill="#011832"></path>
+                                       </svg>
+                                       Any Business Problem Solving
+                                    </li>
+                                    <li>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28" fill="none">
+                                          <path d="M12.1473 23.354C12.144 23.354 12.1402 23.354 12.1369 23.354C12.0013 23.3512 11.8733 23.2932 11.7814 23.1937L2.40471 12.9978C2.24392 12.8228 2.22916 12.5592 2.36971 12.3672C2.51025 12.1758 2.76619 12.1102 2.98166 12.2108L11.5638 16.2293C11.636 16.2632 11.7213 16.2468 11.7765 16.1893L24.8676 2.50708C25.0448 2.32169 25.3346 2.30145 25.5359 2.46114C25.7371 2.62083 25.7836 2.90739 25.6431 3.12231L12.6209 23.0712C12.6023 23.1002 12.5804 23.1265 12.5563 23.1511L12.4989 23.2085C12.4054 23.3015 12.2785 23.354 12.1473 23.354Z" fill="#011832"></path>
+                                       </svg>
+                                       Implement Business Pro
+                                    </li>
+                                 </ul>
+                              </div>
+
+                              <div class="about-img-two d-flex align-items-center gap-3">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="84" height="83" viewbox="0 0 84 83" fill="none">
+                                    <path d="M77.2305 57.6251C74.6496 64.1952 70.376 69.9653 64.8437 74.3495C59.3115 78.7337 52.7176 81.5758 45.7316 82.5872C38.7456 83.5987 31.6164 82.7434 25.0678 80.1084C18.5193 77.4733 12.7847 73.1522 8.44634 67.5839C4.10801 62.0156 1.32046 55.3984 0.366761 48.4043C-0.586938 41.4102 0.32718 34.2883 3.01629 27.7617C5.7054 21.2352 10.0737 15.5365 15.6777 11.2443C21.2816 6.95212 27.9216 4.21934 34.9234 3.32346L40 43L77.2305 57.6251Z" fill="#174035"></path>
+                                    <path d="M39.8223 0.218759C46.5184 -0.484432 53.2836 0.513972 59.4911 3.12145C65.6985 5.72893 71.1474 9.86111 75.3327 15.1351C79.518 20.409 82.3043 26.6541 83.4335 33.2917C84.5626 39.9292 83.9981 46.7443 81.7921 53.1055L44 40L39.8223 0.218759Z" fill="#F75709"></path>
+                                 </svg>
+
+                                 <div>
+                                    <h3 class="mb-0">40%</h3>
+                                    <p class="mb-0">Profit Rate</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <!-- Tab Pane -->
+                        <div class="tab-pane fade" id="about-tab3-pane" role="tabpanel" aria-labelledby="about-tab3" tabindex="0">
+                           <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, se eiusmod tempor
+                              incididunt ut labore et dolore magna aliqua. Ut enim minim veniam, quis nostrud
+                              exercitation ullamco laboris.</p>
+
+                           <div class="d-flex flex-wrap align-items-center justify-content-between gap-4">
+                              <div>
+                                 <ul class="about-list">
+                                    <li>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28" fill="none">
+                                          <path d="M12.1473 23.354C12.144 23.354 12.1402 23.354 12.1369 23.354C12.0013 23.3512 11.8733 23.2932 11.7814 23.1937L2.40471 12.9978C2.24392 12.8228 2.22916 12.5592 2.36971 12.3672C2.51025 12.1758 2.76619 12.1102 2.98166 12.2108L11.5638 16.2293C11.636 16.2632 11.7213 16.2468 11.7765 16.1893L24.8676 2.50708C25.0448 2.32169 25.3346 2.30145 25.5359 2.46114C25.7371 2.62083 25.7836 2.90739 25.6431 3.12231L12.6209 23.0712C12.6023 23.1002 12.5804 23.1265 12.5563 23.1511L12.4989 23.2085C12.4054 23.3015 12.2785 23.354 12.1473 23.354Z" fill="#011832"></path>
+                                       </svg>
+                                       35+ Professional Team Members
+                                    </li>
+                                    <li>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28" fill="none">
+                                          <path d="M12.1473 23.354C12.144 23.354 12.1402 23.354 12.1369 23.354C12.0013 23.3512 11.8733 23.2932 11.7814 23.1937L2.40471 12.9978C2.24392 12.8228 2.22916 12.5592 2.36971 12.3672C2.51025 12.1758 2.76619 12.1102 2.98166 12.2108L11.5638 16.2293C11.636 16.2632 11.7213 16.2468 11.7765 16.1893L24.8676 2.50708C25.0448 2.32169 25.3346 2.30145 25.5359 2.46114C25.7371 2.62083 25.7836 2.90739 25.6431 3.12231L12.6209 23.0712C12.6023 23.1002 12.5804 23.1265 12.5563 23.1511L12.4989 23.2085C12.4054 23.3015 12.2785 23.354 12.1473 23.354Z" fill="#011832"></path>
+                                       </svg>
+                                       Any Business Problem Solving
+                                    </li>
+                                    <li>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewbox="0 0 28 28" fill="none">
+                                          <path d="M12.1473 23.354C12.144 23.354 12.1402 23.354 12.1369 23.354C12.0013 23.3512 11.8733 23.2932 11.7814 23.1937L2.40471 12.9978C2.24392 12.8228 2.22916 12.5592 2.36971 12.3672C2.51025 12.1758 2.76619 12.1102 2.98166 12.2108L11.5638 16.2293C11.636 16.2632 11.7213 16.2468 11.7765 16.1893L24.8676 2.50708C25.0448 2.32169 25.3346 2.30145 25.5359 2.46114C25.7371 2.62083 25.7836 2.90739 25.6431 3.12231L12.6209 23.0712C12.6023 23.1002 12.5804 23.1265 12.5563 23.1511L12.4989 23.2085C12.4054 23.3015 12.2785 23.354 12.1473 23.354Z" fill="#011832"></path>
+                                       </svg>
+                                       Implement Business Pro
+                                    </li>
+                                 </ul>
+                              </div>
+
+                              <div class="about-img-two d-flex align-items-center gap-3">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="84" height="83" viewbox="0 0 84 83" fill="none">
+                                    <path d="M77.2305 57.6251C74.6496 64.1952 70.376 69.9653 64.8437 74.3495C59.3115 78.7337 52.7176 81.5758 45.7316 82.5872C38.7456 83.5987 31.6164 82.7434 25.0678 80.1084C18.5193 77.4733 12.7847 73.1522 8.44634 67.5839C4.10801 62.0156 1.32046 55.3984 0.366761 48.4043C-0.586938 41.4102 0.32718 34.2883 3.01629 27.7617C5.7054 21.2352 10.0737 15.5365 15.6777 11.2443C21.2816 6.95212 27.9216 4.21934 34.9234 3.32346L40 43L77.2305 57.6251Z" fill="#174035"></path>
+                                    <path d="M39.8223 0.218759C46.5184 -0.484432 53.2836 0.513972 59.4911 3.12145C65.6985 5.72893 71.1474 9.86111 75.3327 15.1351C79.518 20.409 82.3043 26.6541 83.4335 33.2917C84.5626 39.9292 83.9981 46.7443 81.7921 53.1055L44 40L39.8223 0.218759Z" fill="#F75709"></path>
+                                 </svg>
+
+                                 <div>
+                                    <h3 class="mb-0">40%</h3>
+                                    <p class="mb-0">Profit Rate</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider"></div>
+   </section>
+
+   <!-- CTA Section -->
+   <section class="cta-section text-center style-two">
+      <!-- Divider -->
+      <div class="divider"></div>
+
+      <div class="container">
+         <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+               <h2 class="mb-4 text-white wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1000ms">ReelRusher'ı Deneyin</h2>
+               <p class="mb-5 px-3 px-lg-5 text-white wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1000ms">
+                  Modern teknolojiler ile geliştirilmiş bu eşsiz puzzle oyun deneyimini kaçırmayın. Hemen oynamaya başlayın!</p>
+               <a href="index.html" class="btn btn-primary wow fadeInUp" data-wow-delay="800ms" data-wow-duration="1000ms">
+                  <span>Oyunu Dene <i class="ti ti-arrow-up-right"></i></span>
+                  <span>Oyunu Dene <i class="ti ti-arrow-up-right"></i></span>
+               </a>
+            </div>
+         </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="divider"></div>
+   </section>
+
+ <!-- Footer Section -->
+   <footer class="footer-section" style="background-color: #174035;">
+      <!-- Divider -->
+      <div class="divider"></div>
+
+      <div class="container">
+         <div class="row g-5">
+            <!-- Footer Card -->
+            <div class="col-12 col-md-4">
+               <div class="footer-card">
+                  <a href="index.html" class="footer-logo mb-4">
+                     <img src="assets/nav-brand-footer.png" alt="ReelRusher">
+                  </a>
+                  <p style="color: #E8F5E8;">ReelRusher - Match-3 ve Zuma mekaniklerini birleştiren, piramit şeklinde tahta ile benzersiz bir puzzle oyun deneyimi.</p>
+                
+               </div>
+            </div>
+
+            <!-- Footer Card -->
+            <div class="col-12 col-md">
+               <div class="footer-card">
+                  <h4 class="mb-4" style="color: #FFFFFF;">Oyun Hakkında</h4>
+                  <ul class="list-unstyled footer-nav-two">
+                     <li><a href="mechanics.html" style="color: #E8F5E8;">Oyun Mekanikleri</a></li>
+                     <li><a href="game-arts.html" style="color: #E8F5E8;">Oyun Sanatı ve Kapaklar</a></li>
+                     <li><a href="team.html" style="color: #E8F5E8;">Geliştirici Ekibi</a></li>
+                     <li><a href="technology.html" style="color: #E8F5E8;">Teknoloji ve Platformlar</a></li>
+                     <li><a href="roadmap.html" style="color: #E8F5E8;">Geliştirme Yol Haritası</a></li>
+                  </ul>
+               </div>
+            </div>
+
+            <!-- Footer Card -->
+            <div class="col-12 col-md">
+               <div class="footer-card">
+                  <h4 class="mb-4" style="color: #FFFFFF;">Faydalı Bağlantılar</h4>
+                  <ul class="list-unstyled footer-nav-two">
+                     <li><a href="index.html" style="color: #E8F5E8;">Ana Sayfa</a></li>
+                     <li><a href="about-us.html" style="color: #E8F5E8;">Hakkımızda</a></li>
+                     <li><a href="contact.html" style="color: #E8F5E8;">İletişim</a></li>
+                
+                  </ul>
+               </div>
+            </div>
+
+            <!-- Footer Card -->
+            <div class="col-12 col-md">
+               <div class="footer-card">
+                  <h4 class="mb-4" style="color: #FFFFFF;">İletişim</h4>
+                  <ul class="list-unstyled footer-nav-two">
+                     <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                           <path d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM19.6 8.25L12.53 12.67C12.21 12.87 11.79 12.87 11.47 12.67L4.4 8.25C4.29973 8.19371 4.21192 8.11766 4.14189 8.02645C4.07186 7.93525 4.02106 7.83078 3.99258 7.71937C3.96409 7.60796 3.9585 7.49194 3.97616 7.37831C3.99381 7.26468 4.03434 7.15581 4.09528 7.0583C4.15623 6.96079 4.23632 6.87666 4.33073 6.811C4.42513 6.74533 4.53187 6.69951 4.6445 6.6763C4.75712 6.65309 4.87328 6.65297 4.98595 6.67595C5.09863 6.69893 5.20546 6.74453 5.3 6.81L12 11L18.7 6.81C18.7945 6.74453 18.9014 6.69893 19.014 6.67595C19.1267 6.65297 19.2429 6.65309 19.3555 6.6763C19.4681 6.69951 19.5749 6.74533 19.6693 6.811C19.7637 6.87666 19.8438 6.96079 19.9047 7.0583C19.9657 7.15581 20.0062 7.26468 20.0238 7.37831C20.0415 7.49194 20.0359 7.60796 20.0074 7.71937C19.9789 7.83078 19.9281 7.93525 19.8581 8.02645C19.7881 8.11766 19.7003 8.19371 19.6 8.25Z" fill="#E8F5E8"></path>
+                        </svg>
+                        <a href="mailto:info@reelrusher.com" style="color: #E8F5E8;">info@reelrusher.com</a>
+                     </li>
+                     <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                           <path d="M8.125 2C7.56141 2 7.02091 2.22388 6.6224 2.6224C6.22388 3.02091 6 3.56141 6 4.125V19.875C6 20.4386 6.22388 20.9791 6.6224 21.3776C7.02091 21.7761 7.56141 22 8.125 22H15.875C16.4386 22 16.9791 21.7761 17.3776 21.3776C17.7761 20.9791 18 20.4386 18 19.875V4.125C18 3.56141 17.7761 3.02091 17.3776 2.6224C16.9791 2.22388 16.4386 2 15.875 2H8.125ZM10.625 17.75H13.375C13.5408 17.75 13.6997 17.8158 13.8169 17.9331C13.9342 18.0503 14 18.2092 14 18.375C14 18.5408 13.9342 18.6997 13.8169 18.8169C13.6997 18.9342 13.5408 19 13.375 19H10.625C10.4592 19 10.3003 18.9342 10.1831 18.8169C10.0658 18.6997 10 18.5408 10 18.375C10 18.2092 10.0658 18.0503 10.1831 17.9331C10.3003 17.8158 10.4592 17.75 10.625 17.75Z" fill="#E8F5E8"></path>
+                        </svg>
+                        <a href="tel:+905324176488" style="color: #E8F5E8;">+90 532 417 64 88</a>
+                     </li>
+                     <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none">
+                           <path d="M12 10.5C12.8284 10.5 13.5 9.82843 13.5 9C13.5 8.17157 12.8284 7.5 12 7.5C11.1716 7.5 10.5 8.17157 10.5 9C10.5 9.82843 11.1716 10.5 12 10.5Z" fill="#E8F5E8"></path>
+                           <path d="M12 1.5C7.86469 1.5 4.5 4.71797 4.5 8.67188C4.5 10.5548 5.35828 13.0589 7.05094 16.1147C8.41031 18.5681 9.98297 20.7867 10.8009 21.8906C10.9392 22.0792 11.1199 22.2326 11.3284 22.3384C11.537 22.4441 11.7676 22.4992 12.0014 22.4992C12.2352 22.4992 12.4658 22.4441 12.6744 22.3384C12.8829 22.2326 13.0637 22.0792 13.2019 21.8906C14.0184 20.7867 15.5925 18.5681 16.9519 16.1147C18.6417 13.0598 19.5 10.5558 19.5 8.67188C19.5 4.71797 16.1353 1.5 12 1.5ZM12 12C11.4067 12 10.8266 11.8241 10.3333 11.4944C9.83994 11.1648 9.45542 10.6962 9.22836 10.1481C9.0013 9.59987 8.94189 8.99667 9.05764 8.41473C9.1734 7.83279 9.45912 7.29824 9.87868 6.87868C10.2982 6.45912 10.8328 6.1734 11.4147 6.05764C11.9967 5.94189 12.5999 6.0013 13.1481 6.22836C13.6962 6.45542 14.1648 6.83994 14.4944 7.33329C14.8241 7.82664 15 8.40666 15 9C14.9991 9.79538 14.6828 10.5579 14.1204 11.1204C13.5579 11.6828 12.7954 11.9991 12 12Z" fill="#E8F5E8"></path>
+                        </svg>
+                        <a href="https://maps.app.goo.gl/Y8658s8PMauVCkGe8" style="color: #E8F5E8;">Adagül Sk. No:18 D:4, İstanbul, Türkiye</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="copyright-section style-two" style="background-color: #174035;">
+         <div class="container">
+            <div class="d-flex flex-wrap justify-content-center align-items-center justify-content-md-between gap-3 gap-lg-4">
+               <!-- Copyright -->
+               <p class="mb-0 copyright justify-content-center justify-content-md-end" style="color: #E8F5E8;"><span id="year">2025</span> © 
+                  <a href="#" style="color: #FFFFFF;">ReelRusher</a>
+                  Tüm hakları saklıdır.</p>
+
+               <!-- Copyright Nav -->
+               <ul class="copyright-nav style-two justify-content-center list-unstyled d-flex flex-wrap gap-3 gap-lg-4">
+                  <li><a href="privacy-policy.html" style="color: #E8F5E8;">Gizlilik ve Çerez Politikası</a></li>
+                  <li><a href="terms-of-use.html" style="color: #E8F5E8;">Kullanım Koşulları</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </footer>
+
+   <!-- Cookie Alert -->
+   <div class="cookiealert shadow-lg show">
+      <h4 class="text-white"><i class="ti ti-cookie"></i> Çerez Bildirimi</h4>
+      <p class="mb-4 text-white">Web sitemizde en iyi deneyim için çerezler kullanıyoruz. Kabul ederek çerez kullanımımızı onaylayın. <a href="#" target="_blank">Çerez Politikası</a>'nı okuyun.</p>
+      <button class="btn btn-dark btn-sm acceptcookies" type="button" aria-label="Close">Kabul Et</button>
+   </div>
+
+   <!-- Scroll To Top -->
+   <button id="scrollTopButton" class="fandi-scrolltop scrolltop-hide">
+      <i class="ti ti-arrow-up"></i>
+   </button>
+
+</body>
+
+</html>
