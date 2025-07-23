@@ -136,7 +136,7 @@
                      geliştirme yol haritamızı keşfet</h2>
                   <p class="text-white wow fadeInUp" data-wow-delay="700ms" data-wow-duration="1000ms">En heyecan verici 
                      Match-3 Zuma puzzle oyununu yaratmak için hazırladığımız detaylı geliştirme planımızı incele.</p>
-                  <a href="#signup" class="btn btn-primary wow fadeInUp" data-wow-delay="900ms" data-wow-duration="1000ms">
+                  <a href="contact.html" class="btn btn-primary wow fadeInUp" data-wow-delay="900ms" data-wow-duration="1000ms">
                      <span>Erken Erişim <i class="ti ti-arrow-up-right"></i></span>
                      <span>Erken Erişim <i class="ti ti-arrow-up-right"></i></span>
                   </a>
@@ -149,23 +149,25 @@
                   <h5>Erken erişim kazanmak için e-posta adresini bırak!</h5>
                   <p class="mb-4">ReelRusher beta sürümüne ilk erişim hakkı kazan</p>
 
-                  <form action="#" id="signup">
+                  <form action="#" id="signup" novalidate>
                      <div class="row g-4">
                         <div class="col-12">
                            <div class="form-group">
-                              <input type="text" class="form-control" placeholder="Adın">
+                              <input type="text" class="form-control" placeholder="Adın" id="userName" name="userName" required minlength="2">
+                              <div class="invalid-feedback">
+                                 Lütfen geçerli bir ad girin (en az 2 karakter).
+                              </div>
                            </div>
                         </div>
                         <div class="col-12">
                            <div class="form-group">
-                              <input type="email" class="form-control" placeholder="E-posta adresi">
+                              <input type="email" class="form-control" placeholder="E-posta adresi" id="userEmail" name="userEmail" required>
+                              <div class="invalid-feedback">
+                                 Lütfen geçerli bir e-posta adresi girin.
+                              </div>
                            </div>
                         </div>
-                        <div class="col-12">
-                           <div class="form-group">
-                              <textarea id="message2" cols="30" rows="10" class="form-control" placeholder="Mesajın (İsteğe bağlı)"></textarea>
-                           </div>
-                        </div>
+                       
                         <div class="col-12">
                            <button type="submit" class="btn btn-primary w-100">
                               <span>Kayıt Ol</span>
@@ -776,6 +778,249 @@
          </div>
       </div>
    </footer>
+
+   <!-- Success Popup Modal -->
+   <div id="successModal" class="modal-overlay" style="display: none;">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h4 class="text-success">
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22,4 12,14.01 9,11.01"></polyline>
+               </svg>
+               Başarılı!
+            </h4>
+            <button type="button" class="close-modal" aria-label="Kapat">
+               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+               </svg>
+            </button>
+         </div>
+         <div class="modal-body">
+            <p>🎉 Harika! <strong id="registeredName"></strong>, ReelRusher erken erişim listesine başarıyla kaydoldun!</p>
+            <p>Beta sürümü hazır olduğunda <strong id="registeredEmail"></strong> adresine bilgi vereceğiz.</p>
+            <p style="margin-top: 15px; font-size: 14px; color: #666;">
+               📧 E-posta kutunu kontrol etmeyi unutma!
+            </p>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-primary close-modal">Tamam</button>
+         </div>
+      </div>
+   </div>
+
+   <!-- CSS for Modal -->
+   <style>
+   .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 0.3s ease-out;
+   }
+
+   .modal-content {
+      background: white;
+      border-radius: 12px;
+      max-width: 500px;
+      width: 90%;
+      margin: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+      animation: slideUp 0.3s ease-out;
+   }
+
+   .modal-header {
+      padding: 20px 24px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 15px;
+   }
+
+   .modal-header h4 {
+      margin: 0;
+      color: #174035;
+      display: flex;
+      align-items: center;
+   }
+
+   .close-modal {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      border-radius: 50%;
+      transition: background-color 0.2s;
+   }
+
+   .close-modal:hover {
+      background-color: #f1f1f1;
+   }
+
+   .modal-body {
+      padding: 20px 24px;
+   }
+
+   .modal-body p {
+      margin-bottom: 10px;
+      line-height: 1.5;
+   }
+
+   .modal-footer {
+      padding: 0 24px 20px;
+      text-align: right;
+   }
+
+   .invalid-feedback {
+      display: none;
+      font-size: 14px;
+      color: #dc3545;
+      margin-top: 5px;
+   }
+
+   .form-control.is-invalid {
+      border-color: #dc3545;
+   }
+
+   .form-control.is-invalid ~ .invalid-feedback {
+      display: block;
+   }
+
+   .form-control.is-valid {
+      border-color: #28a745;
+   }
+
+   @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+   }
+
+   @keyframes slideUp {
+      from { 
+         opacity: 0;
+         transform: translateY(30px);
+      }
+      to { 
+         opacity: 1;
+         transform: translateY(0);
+      }
+   }
+   </style>
+
+   <!-- JavaScript for Form Validation and Modal -->
+   <script>
+   document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('signup');
+      const nameInput = document.getElementById('userName');
+      const emailInput = document.getElementById('userEmail');
+      const modal = document.getElementById('successModal');
+      const closeBtns = document.querySelectorAll('.close-modal');
+
+      // Email validation regex
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      // Real-time validation
+      nameInput.addEventListener('input', function() {
+         validateName(this);
+      });
+
+      emailInput.addEventListener('input', function() {
+         validateEmail(this);
+      });
+
+      // Form submission
+      form.addEventListener('submit', function(e) {
+         e.preventDefault();
+         
+         const isNameValid = validateName(nameInput);
+         const isEmailValid = validateEmail(emailInput);
+
+         if (isNameValid && isEmailValid) {
+            // Show success modal
+            document.getElementById('registeredName').textContent = nameInput.value.trim();
+            document.getElementById('registeredEmail').textContent = emailInput.value.trim();
+            showModal();
+            
+            // Reset form
+            form.reset();
+            clearValidation();
+         }
+      });
+
+      // Close modal events
+      closeBtns.forEach(btn => {
+         btn.addEventListener('click', hideModal);
+      });
+
+      // Close modal on outside click
+      modal.addEventListener('click', function(e) {
+         if (e.target === modal) {
+            hideModal();
+         }
+      });
+
+      // Close modal on Escape key
+      document.addEventListener('keydown', function(e) {
+         if (e.key === 'Escape' && modal.style.display !== 'none') {
+            hideModal();
+         }
+      });
+
+      function validateName(input) {
+         const value = input.value.trim();
+         const isValid = value.length >= 2;
+         
+         if (isValid) {
+            input.classList.remove('is-invalid');
+            input.classList.add('is-valid');
+         } else {
+            input.classList.remove('is-valid');
+            input.classList.add('is-invalid');
+         }
+         
+         return isValid;
+      }
+
+      function validateEmail(input) {
+         const value = input.value.trim();
+         const isValid = emailRegex.test(value);
+         
+         if (isValid) {
+            input.classList.remove('is-invalid');
+            input.classList.add('is-valid');
+         } else {
+            input.classList.remove('is-valid');
+            input.classList.add('is-invalid');
+         }
+         
+         return isValid;
+      }
+
+      function clearValidation() {
+         [nameInput, emailInput].forEach(input => {
+            input.classList.remove('is-valid', 'is-invalid');
+         });
+      }
+
+      function showModal() {
+         modal.style.display = 'flex';
+         document.body.style.overflow = 'hidden';
+      }
+
+      function hideModal() {
+         modal.style.display = 'none';
+         document.body.style.overflow = '';
+      }
+   });
+   </script>
 
    <!-- Cookie Alert -->
    <div class="cookiealert shadow-lg show">
