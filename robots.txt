@@ -1,0 +1,21 @@
+# Robots.txt for ReelRusher
+# This file allows all web crawlers to access all content
+
+User-agent: *
+Allow: /
+
+# Sitemap location (when available)
+# Sitemap: https://reelrusher.com/sitemap.xml
+
+# Allow crawling of CSS and JS files for better indexing
+Allow: /assets/
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.webp
+
+# No crawl delay specified - use default crawler politeness
